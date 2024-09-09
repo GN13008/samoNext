@@ -131,7 +131,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="stats shadow my-4">
+      <div className="max-md:stats-vertical stats shadow my-4">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg
@@ -204,7 +204,7 @@ export default function Home() {
       </div>
 
       <div className="my-4">
-        <ul className="timeline">
+        <ul className="timeline max-md:timeline-vertical">
           <li>
             <div className="timeline-start">1984</div>
             <div className="timeline-middle">
