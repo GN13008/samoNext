@@ -21,3 +21,7 @@
     -webkit-backdrop-filter: blur(2px);
   }
 }
+
+.btn {
+  @apply rounded !important;
+}
