@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBarComponent from "@/components/navBar.component";
 import FooterComponent from "@/components/Foooter.component";
+import MainHeader from "@/components/MainHeader.component";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="winter">
       <body className={inter.className}>
-        <NavBarComponent />
+        <MainHeader />
         {children}
         <FooterComponent />
       </body>

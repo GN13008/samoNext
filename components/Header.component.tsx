@@ -74,15 +74,11 @@ const Header = () => {
             title={`${config.appName} hompage`}
           >
             <Image
-              src={logo}
-              alt={`${config.appName} logo`}
-              className="w-8"
-              placeholder="blur"
-              priority={true}
-              width={32}
-              height={32}
+              src="/logoSamo_transparent.png"
+              alt="logo samo aciers"
+              width={200}
+              height={100}
             />
-            <span className="font-extrabold text-lg">{config.appName}</span>
           </Link>
         </div>
 
@@ -123,16 +119,22 @@ const Header = () => {
               href="/"
             >
               <Image
-                src={logo}
-                alt={`${config.appName} logo`}
-                className="w-8"
-                placeholder="blur"
-                priority={true}
-                width={32}
-                height={32}
+                src="/logoSamo_transparent.png"
+                alt="logo samo aciers"
+                width={200}
+                height={100}
               />
-              <span className="font-extrabold text-lg">{config.appName}</span>
             </Link>
+
+            {/* <a className="btn btn-ghost text-xl hidden lg:flex"></a>
+            <a className="btn btn-ghost text-xl lg:hidden">
+              <Image
+                src="/logoS_transparent.png"
+                alt="logo samo aciers"
+                width={50}
+                height={50}
+              />
+            </a> */}
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5"
