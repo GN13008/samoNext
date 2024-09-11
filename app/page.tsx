@@ -207,13 +207,13 @@ export default function Home() {
           <ol className="relative border-s border-gray-700">
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-800">
                 1958
               </time>
               {/* <h3 className="text-lg font-semibold text-white">
                 Application UI code in Tailwind CSS
               </h3> */}
-              <p className="mb-4 text-base font-normal text-gray-400">
+              <p className="text-base font-normal text-gray-500">
                 la Société Ameublement Mécanique et Outillage, aujourd’hui
                 connue sous le nom de SAMO Aciers, est fondée. À ses débuts,
                 elle se spécialise dans la fabrication de petits mobiliers
@@ -224,26 +224,26 @@ export default function Home() {
             </li>
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-800">
                 1989
               </time>
               {/* <h3 className="text-lg font-semibold text-white">
                 Application UI code in Tailwind CSS
               </h3> */}
-              <p className="mb-4 text-base font-normal text-gray-400">
+              <p className="text-base font-normal text-gray-500">
                 Jean-Claude BRUYERE reprend l’entreprise et décide de se
                 concentrer exclusivement sur le négoce d’aciers étirés à froid.
               </p>
             </li>
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-800">
                 1990
               </time>
               {/* <h3 className="text-lg font-semibold text-white">
                 Application UI code in Tailwind CSS
               </h3> */}
-              <p className="mb-4 text-base font-normal text-gray-400">
+              <p className="text-base font-normal text-gray-500">
                 l’entreprise déménage à VILLARS, augmentant ainsi sa capacité de
                 stockage et élargissant sa gamme pour proposer tous types de
                 produits métallurgiques, en barres ou à la coupe.
@@ -251,39 +251,39 @@ export default function Home() {
             </li>
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-800">
                 2018
               </time>
               {/* <h3 className="text-lg font-semibold text-white">
                 Marketing UI design in Figma
               </h3> */}
-              <p className="text-base font-normal text-gray-400">
+              <p className="text-base font-normal text-gray-500">
                 L’esprit familial de l’entreprise se renforce en 2018 avec
                 l’arrivée de Maxime BRUYERE, fils cadet de Jean-Claude.
               </p>
             </li>
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-800">
                 2023
               </time>
               {/* <h3 className="text-lg font-semibold text-white">
                 E-Commerce UI code in Tailwind CSS
               </h3> */}
-              <p className="text-base font-normal text-gray-400">
+              <p className="text-base font-normal text-gray-500">
                 En 2023, il reprend les rênes de l’entreprise, marquant le début
                 d’une nouvelle ère pour SAMO Aciers.
               </p>
             </li>
             <li className="ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-800">
                 2024
               </time>
               {/* <h3 className="text-lg font-semibold text-white">
                 E-Commerce UI code in Tailwind CSS
               </h3> */}
-              <p className="text-base font-normal text-gray-400">
+              <p className="text-base font-normal text-gray-500">
                 Cette année, l’entreprise lance un ambitieux projet de
                 rénovation et d’agrandissement pour doubler sa surface de
                 stockage à plus de 1700 m². Ce projet vise à élargir encore
