@@ -7,30 +7,21 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "Qu'est ce que j'achete ?",
+    question: "Question 1 assez longie mais ca va",
     answer: (
       <div className="space-y-2 leading-relaxed">
-        La mise en ligne de ton profil. Tu peux te créer et paramétrer ton
-        profil gratuitement.
+        Réponse 1 ajznealzneamoznan djla cmo^niamc âzco$a a^z ^ù
       </div>
     ),
   },
   {
-    question: "Est ce que je peux être remboursé ?",
-    answer: (
-      <p>
-        Oui ! Si tu n'es pas satisfait, demande un remboursement par mail dans
-        le 1er mois de ton inscription. Si possible ajoute la raison qu'on
-        puisse améliorer la plateforme 🏄‍♂️
-      </p>
-    ),
+    question: "Question 2",
+    answer: <p>Réponse 2</p>,
   },
   {
     question: "J'ai une autre question",
     answer: (
-      <div className="space-y-2 leading-relaxed">
-        Cool, envoi nous un mail !
-      </div>
+      <div className="space-y-2 leading-relaxed">Contactez nous à MAIL</div>
     ),
   },
 ];
