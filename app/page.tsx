@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hero bg-base-200">
+      <div className="hero">
         <div className="hero-content my-12 flex-col lg:flex-row">
           <img src="/acier.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
           <div>
@@ -59,8 +59,21 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="hero bg-base-200">
+        <div className="hero-content flex flex-col my-8">
+          <h1 className="text-5xl font-extrabold mb-4">
+            Un service sur mesure
+          </h1>
+          <p className="text-base mb-4">
+            Nous vendons tous types de nuances (C45, S355, 304L, ...), profil
+            (rond, plat, tube, ...), finition (Laminé, étiré, ...).
+          </p>
+          <Products />
+        </div>
+      </div>
+
       <div className="hero my-12 flex flex-col mx-auto">
-        <h1 className="text-5xl font-extrabold mb-8">SAMO Aciers</h1>
+        <h1 className="text-5xl font-extrabold mb-8">Un service fiabilisé</h1>
 
         <div className="hero-content grid grid-cols-3 gap-4 w-full p-4">
           <InfoCardComponent
@@ -126,20 +139,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hero bg-base-200">
-        <div className="hero-content flex flex-col my-8">
-          <h1 className="text-5xl font-extrabold mb-4">
-            Un service sur mesure
-          </h1>
-          <p className="text-base mb-4">
-            Nous vendons tous types de nuances (C45, S355, 304L, ...), profil
-            (rond, plat, tube, ...), finition (Laminé, étiré, ...).
-          </p>
-          <Products />
-        </div>
-      </div>
-
-      <div className="hero my-12 flex flex-col mx-auto">
+      {/* <div className="hero my-12 flex flex-col mx-auto">
         <h1 className="text-5xl font-extrabold mb-8">Un service fiabilisé</h1>
         <div className="max-md:stats-vertical stats shadow">
           <div className="stat">
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="stat-desc text-secondary">31 tasks remaining</div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="hero bg-base-200">
         <div className="hero-content flex-col my-8">

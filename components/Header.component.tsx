@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <>
       <nav
-        className="container flex items-center justify-between px-8 py-4 mx-auto"
+        className="container flex items-center justify-between px-8 mx-auto"
         aria-label="Global"
       >
         {/* Burger button to open menu on mobile */}
@@ -97,12 +97,14 @@ const Header = () => {
         </div>
 
         {/* CTA on large screens */}
-        <Link
+        <div className="">
+          {/* <Link
           className="hidden lg:flex lg:justify-end lg:flex-1"
           href="/sportif/enzo"
         >
           Go to profil
-        </Link>
+        </Link> */}
+        </div>
         {/* <div className="hidden lg:flex lg:justify-end lg:flex-1">{cta}</div> */}
       </nav>
 
