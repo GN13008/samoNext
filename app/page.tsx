@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hero bg-base-200">
+      <div className="hero bg-base-200" id="produits">
         <div className="hero-content flex flex-col my-8">
           <h1 className="text-5xl font-extrabold mb-4">
             Un service sur mesure
@@ -205,7 +205,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="hero bg-base-200">
+      <div className="hero bg-base-200" id="histoire">
         <div className="my-12">
           <h1 className="text-5xl font-extrabold mb-4 text-center">
             Une histoire de famille
