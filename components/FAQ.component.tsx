@@ -26,8 +26,8 @@ const faqList = [
   },
 ];
 
-const Item = ({ item }) => {
-  const accordion = useRef(null);
+const Item = ({ item }: { item: any }) => {
+  const accordion = useRef<any>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
