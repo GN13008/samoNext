@@ -17,9 +17,9 @@ export default function FooterComponent() {
           </aside>
           <nav>
             <h6 className="footer-title">Services</h6>
-            {products.map((prod) => {
+            {products.map((prod, i) => {
               return (
-                <a className="link link-hover" href={prod.link}>
+                <a key={i} className="link link-hover" href={prod.link}>
                   {prod.title}
                 </a>
               );
