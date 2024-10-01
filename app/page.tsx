@@ -32,12 +32,14 @@ export default function Home() {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-md">
+          <div className="max-w-lg">
             <h1 className="mb-5 text-7xl font-mono font-bold">SAMO Aciers</h1>
-            <p className="mb-5 text-2xl">
-              Vente d'acier au détails depuis 1991
+            <p className="mb-5 text-3xl">
+              Votre fournisseur d'acier au détails depuis 1958
             </p>
-            <button className="btn btn-primary">Découvrir</button>
+            <a href="#produits">
+              <button className="btn btn-primary">Découvrir</button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { products } from "./data";
 
 export default function FooterComponent() {
   return (
@@ -12,24 +13,32 @@ export default function FooterComponent() {
               width={200}
               height={100}
             />
-            <p>Vente d'acier depuis 1991</p>
+            <p>Vente d'acier depuis 1958</p>
           </aside>
           <nav>
             <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            {products.map((prod) => {
+              return (
+                <a className="link link-hover" href={prod.link}>
+                  {prod.title}
+                </a>
+              );
+            })}
           </nav>
           <nav>
-            <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <h6 className="footer-title">Samo Aciers</h6>
+            <a className="link link-hover" href="#produits">
+              Produits
+            </a>
+            <a className="link link-hover" href="#histoire">
+              Histoire
+            </a>
+            <a className="link link-hover" href="#faq">
+              FAQ
+            </a>
           </nav>
           <nav>
-            <h6 className="footer-title">Legal</h6>
+            <h6 className="footer-title">Informations</h6>
             <a className="link link-hover">Terms of use</a>
             <a className="link link-hover">Privacy policy</a>
             <a className="link link-hover">Cookie policy</a>
