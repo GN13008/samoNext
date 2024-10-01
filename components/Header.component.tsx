@@ -176,11 +176,11 @@ const Header = () => {
                 ))}
               </div>
             </div>
-            <div className="divider"></div>
+            {/* <div className="divider"></div> */}
             {/* Your CTA on small screens */}
-            <Link className="flex flex-col" href="/sportif/enzo">
+            {/* <Link className="flex flex-col" href="/sportif/enzo">
               Go to profil
-            </Link>
+            </Link> */}
             {/* <div className="flex flex-col">{cta}</div> */}
           </div>
         </div>

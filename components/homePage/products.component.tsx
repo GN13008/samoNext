@@ -2,10 +2,10 @@ import { products } from "../data";
 
 export default function Products() {
   return (
-    <div className="flex content-center gap-4">
+    <div className="flex flex-col content-center gap-4 lg:flex-row items-center">
       {products.map((prod) => {
         return (
-          <div className="card w-1/5 bg-base-100 image-full shadow-xl">
+          <div className="card w-4/5 lg:w-1/5 bg-base-100 image-full shadow-xl">
             <figure>
               <img src={prod.img} alt={prod.title} />
             </figure>

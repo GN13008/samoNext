@@ -48,12 +48,15 @@ export default function Home() {
         <div className="hero-content my-12 flex-col lg:flex-row">
           <img
             src="/home.jpg"
-            className="max-w-sm rounded-lg shadow-2xl lg:mr-8"
+            className="lg:max-w-md rounded-lg shadow-2xl lg:mr-8"
           />
           <div>
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-5xl font-bold hidden md:inline">
               Une Histoire Familiale de Confiance et d’Innovation <br /> depuis
               1958
+            </h1>
+            <h1 className="text-3xl text-center font-bold md:hidden">
+              Confiance et Innovation <br /> depuis 1958
             </h1>
             <p className="py-6">
               Depuis 1958, SAMO Aciers accompagne ses clients avec expertise et
@@ -69,7 +72,7 @@ export default function Home() {
 
       <div className="hero bg-base-200" id="produits">
         <div className="hero-content flex flex-col my-8">
-          <h1 className="text-5xl font-extrabold mb-4">
+          <h1 className="text-5xl font-extrabold mb-4 text-center">
             Un service sur mesure
           </h1>
           <p className="text-base mb-4">
@@ -81,9 +84,11 @@ export default function Home() {
       </div>
 
       <div className="hero my-12 flex flex-col mx-auto">
-        <h1 className="text-5xl font-extrabold mb-8">Un service fiabilisé</h1>
+        <h1 className="text-5xl font-extrabold mb-8 text-center">
+          Un service fiabilisé
+        </h1>
 
-        <div className="hero-content grid grid-cols-3 gap-4 w-full p-4">
+        <div className="hero-content grid grid-cols-1 lg:grid-cols-3 gap-4 w-full p-4">
           <InfoCardComponent
             svg={
               <svg
@@ -215,7 +220,7 @@ export default function Home() {
           <div className="hero-content flex-col lg:flex-row">
             <img
               src="/history.jpg"
-              className="max-w-sm rounded-lg shadow-2xl lg:mr-12"
+              className="lg:max-w-md rounded-lg shadow-2xl lg:mr-12"
             />
             <div>
               <ol className="relative border-s border-gray-700">

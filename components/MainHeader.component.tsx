@@ -34,7 +34,7 @@ const MainHeader = () => {
         aria-label="Global"
       >
         <Header />
-        <HeaderAuth />
+        {/* <HeaderAuth /> */}
       </nav>
     </header>
   );
