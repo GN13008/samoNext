@@ -5,7 +5,7 @@ export default function FooterComponent() {
   return (
     <>
       <footer className="footer bg-slate-50 text-base-content p-10">
-        <div className="footer container mx-auto">
+        <div className="footer container px-8 mx-auto">
           <aside>
             <Image
               src="/logoSamo_transparent.png"

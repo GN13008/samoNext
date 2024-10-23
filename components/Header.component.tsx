@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <>
       <nav
-        className="container flex items-center justify-between px-8 mx-auto"
+        className="container flex items-center justify-between mx-auto"
         aria-label="Global"
       >
         {/* Burger button to open menu on mobile */}
