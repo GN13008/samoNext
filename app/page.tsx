@@ -27,7 +27,7 @@ export default function Home() {
       <div
         className="hero min-h-screen"
         style={{
-          backgroundImage: "url(/decoupe-laser.jpg)",
+          backgroundImage: "url(/home3.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-40"></div>
@@ -76,13 +76,41 @@ export default function Home() {
 
       <div className="hero bg-slate-50" id="produits">
         <div className="hero-content flex flex-col my-8">
-          <h1 className="w-full mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 text-left">
-            Un service sur mesure
-          </h1>
-          <p className="w-full text-left text-base mb-4">
-            Nous vendons tous types de nuances (C45, S355, 304L, ...), profil
-            (rond, plat, tube, ...), finition (Laminé, étiré, ...).
-          </p>
+          <div className="w-full flex justify-between align-top">
+            <div className="">
+              <h1 className="w-full mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 text-left">
+                Un service sur mesure
+              </h1>
+              <p className="w-full text-left text-base mb-4">
+                Nous vendons tous types de nuances (C45, S355, 304L, ...),
+                profil (rond, plat, tube, ...), finition (Laminé, étiré, ...).
+              </p>
+            </div>
+            <a
+              href="/exemple-produit"
+              title=""
+              className="flex items-center text-base font-medium text-blue-600 hover:underline"
+            >
+              tous les aciers
+              <svg
+                className="ms-1 h-5 w-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 12H5m14 0-4 4m4-4-4-4"
+                />
+              </svg>
+            </a>
+          </div>
           <Products />
         </div>
       </div>

@@ -14,6 +14,13 @@ export const products = [
     link: "/produit/exemple",
   },
   {
+    title: "Carré",
+    img: "/acier_corniere.png",
+    content: "Un texte sur le produit",
+    cta: "Découvrir",
+    link: "/produit/exemple",
+  },
+  {
     title: "Tube",
     img: "/acier_tube.png",
     content: "Un texte sur le produit",
@@ -21,16 +28,9 @@ export const products = [
     link: "/produit/exemple",
   },
   {
-    title: "Cornière",
-    img: "/acier_corniere.png",
-    content: "Un texte sur le produit",
-    cta: "Découvrir",
-    link: "/produit/exemple",
-  },
-  {
-    title: "Tous les aciers",
+    title: "Produits traditionnel",
     img: "/acier_tous.png",
-    content: "Un texte sur le produit",
+    content: "(Cornière, tube, carré, ...)",
     cta: "Découvrir",
     link: "/produit/exemple",
   },

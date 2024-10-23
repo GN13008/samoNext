@@ -20,7 +20,7 @@ export default function Products() {
                 />
               </div>
               <div className="absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
-                <h1 className="font-mono text-2xl font-bold text-white">
+                <h1 className="text-2xl font-semibold text-white">
                   {prod.title}
                 </h1>
                 <h1 className="text-sm font-light text-gray-200">
