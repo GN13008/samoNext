@@ -6,6 +6,7 @@ export default function Products() {
       {products.map((prod, i) => {
         return (
           <a
+            key={i}
             href="/produit/exemple"
             className="da relative flex flex-col justify-center overflow-hidden w-4/5 lg:w-1/5 rounded-xl"
           >

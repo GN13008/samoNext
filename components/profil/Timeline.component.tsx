@@ -114,7 +114,7 @@ const Timeline = () => {
           </li> */}
           {steps.map((step, i) => {
             return (
-              <li>
+              <li key={i}>
                 {i > 0 && <hr className={step.done ? "bg-primary" : ""} />}
                 <div
                   className={`${i % 2 == 0 ? "timeline-start " : "timeline-end "}timeline-box bg-neutral`}
@@ -147,7 +147,7 @@ const Timeline = () => {
         <ul className="timeline timeline-vertical">
           {steps.map((step, i) => {
             return (
-              <li>
+              <li key={i}>
                 {i > 0 && <hr className={step.done ? "bg-primary" : ""} />}
                 <div
                   className={`${i % 2 == 0 ? "timeline-start " : "timeline-end "}timeline-box bg-neutral`}
