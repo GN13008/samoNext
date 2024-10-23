@@ -28,7 +28,7 @@ const links = [
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
 const MainHeader = () => {
   return (
-    <header className="bg-base-200 flex">
+    <header className="flex">
       <nav
         className="container flex items-center justify-between px-8 py-4 mx-auto"
         aria-label="Global"

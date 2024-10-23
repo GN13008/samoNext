@@ -23,5 +23,9 @@
 }
 
 .btn {
-  @apply rounded !important;
+  @apply rounded-lg !important;
+}
+
+h1 {
+  @apply text-gray-800 !important;
 }

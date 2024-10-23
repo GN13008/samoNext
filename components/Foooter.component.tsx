@@ -4,7 +4,7 @@ import { products } from "./data";
 export default function FooterComponent() {
   return (
     <>
-      <footer className="footer bg-base-200 text-base-content p-10">
+      <footer className="footer bg-slate-50 text-base-content p-10">
         <div className="footer container mx-auto">
           <aside>
             <Image
@@ -27,13 +27,13 @@ export default function FooterComponent() {
           </nav>
           <nav>
             <h6 className="footer-title">Samo Aciers</h6>
-            <a className="link link-hover" href="#produits">
+            <a className="link link-hover" href="/#produits">
               Produits
             </a>
-            <a className="link link-hover" href="#histoire">
+            <a className="link link-hover" href="/#histoire">
               Histoire
             </a>
-            <a className="link link-hover" href="#faq">
+            <a className="link link-hover" href="/#faq">
               FAQ
             </a>
           </nav>

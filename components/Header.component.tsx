@@ -84,7 +84,7 @@ const Header = () => {
 
         {/* Your links on large screens */}
         <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
-          {links.map((link) => (
+          {/* {links.map((link) => (
             <Link
               href={link.href}
               key={link.href}
@@ -93,7 +93,51 @@ const Header = () => {
             >
               {link.label}
             </Link>
-          ))}
+          ))} */}
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="flex align-center items-center gap-2 py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+            >
+              Produits
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            >
+              <li>
+                <a href="/produit/exemple">Rond</a>
+              </li>
+              <li>
+                <a href="/produit/exemple">Plat</a>
+              </li>
+            </ul>
+          </div>
+          <a
+            href="/exemple-produit"
+            className="flex align-center items-center gap-2 py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+          >
+            <svg
+              className="w-4 h-4 size-6"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            04 77 93 00 33
+          </a>
+          <a
+            href="/produit/exemple"
+            className="btn btn-primary text-white btn-md"
+          >
+            Mon Compte client
+          </a>
         </div>
 
         {/* CTA on large screens */}
@@ -164,7 +208,7 @@ const Header = () => {
           <div className="flow-root mt-6">
             <div className="py-4">
               <div className="flex flex-col gap-y-4 items-start">
-                {links.map((link) => (
+                {/* {links.map((link) => (
                   <Link
                     href={link.href}
                     key={link.href}
@@ -173,7 +217,51 @@ const Header = () => {
                   >
                     {link.label}
                   </Link>
-                ))}
+                ))} */}
+                <div className="dropdown">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="flex align-center items-center gap-2 py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  >
+                    Produits
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                  >
+                    <li>
+                      <a href="/produit/exemple">Rond</a>
+                    </li>
+                    <li>
+                      <a href="/produit/exemple">Plat</a>
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="/exemple-produit"
+                  className="flex align-center items-center gap-2 py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >
+                  <svg
+                    className="w-4 h-4 size-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  04 77 93 00 33
+                </a>
+                <a
+                  href="/produit/exemple"
+                  className="btn btn-primary text-white btn-md"
+                >
+                  Mon Compte client
+                </a>
               </div>
             </div>
             {/* <div className="divider"></div> */}

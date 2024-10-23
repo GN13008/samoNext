@@ -30,15 +30,19 @@ export default function Home() {
           backgroundImage: "url(/decoupe-laser.jpg)",
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay bg-opacity-40"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-lg">
-            <h1 className="mb-5 text-7xl font-mono font-bold">SAMO Aciers</h1>
-            <p className="mb-5 text-3xl">
+            <p className="mb-5 text-7xl font-mono font-bold text-white">
+              SAMO Aciers
+            </p>
+            <p className="mb-5 text-3xl text-white">
               Votre fournisseur d'acier au détails depuis 1958
             </p>
-            <a href="#produits">
-              <button className="btn btn-primary">Découvrir</button>
+            <a href="/produit/exemple">
+              <button className="btn btn-md btn-primary text-white">
+                Découvrir
+              </button>
             </a>
           </div>
         </div>
@@ -51,11 +55,11 @@ export default function Home() {
             className="lg:max-w-md rounded-lg shadow-2xl lg:mr-8"
           />
           <div>
-            <h1 className="text-5xl font-bold hidden md:inline">
+            <h1 className="mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 hidden md:inline">
               Une Histoire Familiale de Confiance et d’Innovation <br /> depuis
               1958
             </h1>
-            <h1 className="text-3xl text-center font-bold md:hidden">
+            <h1 className="mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 md:hidden">
               Confiance et Innovation <br /> depuis 1958
             </h1>
             <p className="py-6">
@@ -70,87 +74,99 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hero bg-base-200" id="produits">
+      <div className="hero bg-slate-50" id="produits">
         <div className="hero-content flex flex-col my-8">
-          <h1 className="text-5xl font-extrabold mb-4 text-center">
+          <h1 className="w-full mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 text-left">
             Un service sur mesure
           </h1>
-          <p className="text-base mb-4">
+          <p className="w-full text-left text-base mb-4">
             Nous vendons tous types de nuances (C45, S355, 304L, ...), profil
             (rond, plat, tube, ...), finition (Laminé, étiré, ...).
           </p>
           <Products />
         </div>
       </div>
-
-      <div className="hero my-12 flex flex-col mx-auto">
-        <h1 className="text-5xl font-extrabold mb-8 text-center">
-          Un service fiabilisé
-        </h1>
-
-        <div className="hero-content grid grid-cols-1 lg:grid-cols-3 gap-4 w-full p-4">
-          <InfoCardComponent
-            svg={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
-                />
-              </svg>
-            }
-            title="Confiance"
-            content="En tant qu’entreprise familiale, nous mettons un point d’honneur à établir des relations solides avec nos clients, fondées sur la transparence et la fiabilité."
-          />
-          <InfoCardComponent
-            svg={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
-                />
-              </svg>
-            }
-            title="Rapidité"
-            content="Grâce à notre capacité de stockage élargie et à une organisation optimisée, nous garantissons des délais de livraison rapides pour répondre aux besoins urgents de nos clients."
-          />
-          <InfoCardComponent
-            svg={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"
-                />
-              </svg>
-            }
-            title="Disponibilité"
-            content="Notre large gamme de produits métallurgiques, associée à un service client réactif, fait de SAMO Aciers un partenaire de choix pour tous vos projets."
-          />
+      <section className="bg-white antialiased py-4 md:py-8">
+        <div className="py-8 mx-auto max-w-screen-xl px-8 sm:py-16 ">
+          <div className="max-w-screen-md mb-8 lg:mb-16">
+            <h2 className="mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800">
+              Un service fiabilisé
+            </h2>
+            <p className="text-gray-500 sm:text-xl">
+              Avec notre expertise de plus de 50 ans, nous vous garantissons un
+              service de qualité
+            </p>
+          </div>
+          <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            <div>
+              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12">
+                <svg
+                  className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold">Confiance</h3>
+              <p className="text-gray-500">
+                En tant qu’entreprise familiale, nous mettons un point d’honneur
+                à établir des relations solides avec nos clients, fondées sur la
+                transparence et la fiabilité.
+              </p>
+            </div>
+            <div>
+              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12">
+                <svg
+                  className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.25 2.25a.75.75 0 0 0 0 1.5H3v10.5a3 3 0 0 0 3 3h1.21l-1.172 3.513a.75.75 0 0 0 1.424.474l.329-.987h8.418l.33.987a.75.75 0 0 0 1.422-.474l-1.17-3.513H18a3 3 0 0 0 3-3V3.75h.75a.75.75 0 0 0 0-1.5H2.25Zm6.54 15h6.42l.5 1.5H8.29l.5-1.5Zm8.085-8.995a.75.75 0 1 0-.75-1.299 12.81 12.81 0 0 0-3.558 3.05L11.03 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l2.47-2.47 1.617 1.618a.75.75 0 0 0 1.146-.102 11.312 11.312 0 0 1 3.612-3.321Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold">Rapidité</h3>
+              <p className="text-gray-500">
+                Grâce à notre capacité de stockage élargie et à une organisation
+                optimisée, nous garantissons des délais de livraison rapides
+                pour répondre aux besoins urgents de nos clients.
+              </p>
+            </div>
+            <div>
+              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12">
+                <svg
+                  className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold">Disponibilité</h3>
+              <p className="text-gray-500">
+                Notre large gamme de produits métallurgiques, associée à un
+                service client réactif, fait de SAMO Aciers un partenaire de
+                choix pour tous vos projets.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* <div className="hero my-12 flex flex-col mx-auto">
         <h1 className="text-5xl font-extrabold mb-8">Un service fiabilisé</h1>
@@ -212,112 +228,115 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="hero bg-base-200" id="histoire">
+      <div className="hero bg-slate-50" id="histoire">
         <div className="my-12">
-          <h1 className="text-5xl font-extrabold mb-4 text-center">
-            Une histoire de famille
-          </h1>
-          <div className="hero-content flex-col lg:flex-row">
-            <img
-              src="/history.jpg"
-              className="lg:max-w-md rounded-lg shadow-2xl lg:mr-12"
-            />
-            <div>
-              <ol className="relative border-s border-gray-700">
-                <li className="mb-10 ms-4">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-800">
-                    1958
-                  </time>
-                  {/* <h3 className="text-lg font-semibold text-white">
+          <div className="hero-content flex-col">
+            <h1 className="w-full mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 text-left">
+              Une histoire de famille
+            </h1>
+            <div className="hero-content flex-col lg:flex-row">
+              <img
+                src="/history.jpg"
+                className="lg:max-w-md rounded-lg shadow-2xl lg:mr-12"
+              />
+              <div>
+                <ol className="relative border-s border-gray-700">
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-blue-500">
+                      1958
+                    </time>
+                    {/* <h3 className="text-lg font-semibold text-white">
                 Application UI code in Tailwind CSS
               </h3> */}
-                  <p className="text-base font-normal text-gray-500">
-                    la Société Ameublement Mécanique et Outillage, aujourd’hui
-                    connue sous le nom de SAMO Aciers, est fondée. À ses débuts,
-                    elle se spécialise dans la fabrication de petits mobiliers
-                    d’atelier et le stockage d’aciers étirés à froid. Ce
-                    savoir-faire dans les matériaux métallurgiques se perpétue
-                    encore aujourd’hui.
-                  </p>
-                </li>
-                <li className="mb-10 ms-4">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-800">
-                    1989
-                  </time>
-                  {/* <h3 className="text-lg font-semibold text-white">
+                    <p className="text-base font-normal text-gray-500">
+                      la Société Ameublement Mécanique et Outillage, aujourd’hui
+                      connue sous le nom de SAMO Aciers, est fondée. À ses
+                      débuts, elle se spécialise dans la fabrication de petits
+                      mobiliers d’atelier et le stockage d’aciers étirés à
+                      froid. Ce savoir-faire dans les matériaux métallurgiques
+                      se perpétue encore aujourd’hui.
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-blue-500">
+                      1989
+                    </time>
+                    {/* <h3 className="text-lg font-semibold text-white">
                 Application UI code in Tailwind CSS
               </h3> */}
-                  <p className="text-base font-normal text-gray-500">
-                    Jean-Claude BRUYERE reprend l’entreprise et décide de se
-                    concentrer exclusivement sur le négoce d’aciers étirés à
-                    froid.
-                  </p>
-                </li>
-                <li className="mb-10 ms-4">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-800">
-                    1990
-                  </time>
-                  {/* <h3 className="text-lg font-semibold text-white">
+                    <p className="text-base font-normal text-gray-500">
+                      Jean-Claude BRUYERE reprend l’entreprise et décide de se
+                      concentrer exclusivement sur le négoce d’aciers étirés à
+                      froid.
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-blue-500">
+                      1990
+                    </time>
+                    {/* <h3 className="text-lg font-semibold text-white">
                 Application UI code in Tailwind CSS
               </h3> */}
-                  <p className="text-base font-normal text-gray-500">
-                    l’entreprise déménage à VILLARS, augmentant ainsi sa
-                    capacité de stockage et élargissant sa gamme pour proposer
-                    tous types de produits métallurgiques, en barres ou à la
-                    coupe.
-                  </p>
-                </li>
-                <li className="mb-10 ms-4">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-800">
-                    2018
-                  </time>
-                  {/* <h3 className="text-lg font-semibold text-white">
+                    <p className="text-base font-normal text-gray-500">
+                      l’entreprise déménage à VILLARS, augmentant ainsi sa
+                      capacité de stockage et élargissant sa gamme pour proposer
+                      tous types de produits métallurgiques, en barres ou à la
+                      coupe.
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-blue-500">
+                      2018
+                    </time>
+                    {/* <h3 className="text-lg font-semibold text-white">
                 Marketing UI design in Figma
               </h3> */}
-                  <p className="text-base font-normal text-gray-500">
-                    L’esprit familial de l’entreprise se renforce en 2018 avec
-                    l’arrivée de Maxime BRUYERE, fils cadet de Jean-Claude.
-                  </p>
-                </li>
-                <li className="mb-10 ms-4">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-800">
-                    2023
-                  </time>
-                  {/* <h3 className="text-lg font-semibold text-white">
+                    <p className="text-base font-normal text-gray-500">
+                      L’esprit familial de l’entreprise se renforce en 2018 avec
+                      l’arrivée de Maxime BRUYERE, fils cadet de Jean-Claude.
+                    </p>
+                  </li>
+                  <li className="mb-10 ms-4">
+                    <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-blue-500">
+                      2023
+                    </time>
+                    {/* <h3 className="text-lg font-semibold text-white">
                 E-Commerce UI code in Tailwind CSS
               </h3> */}
-                  <p className="text-base font-normal text-gray-500">
-                    En 2023, il reprend les rênes de l’entreprise, marquant le
-                    début d’une nouvelle ère pour SAMO Aciers.
-                  </p>
-                </li>
-                <li className="ms-4">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-800">
-                    2024
-                  </time>
-                  {/* <h3 className="text-lg font-semibold text-white">
+                    <p className="text-base font-normal text-gray-500">
+                      En 2023, il reprend les rênes de l’entreprise, marquant le
+                      début d’une nouvelle ère pour SAMO Aciers.
+                    </p>
+                  </li>
+                  <li className="ms-4">
+                    <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-blue-500">
+                      2024
+                    </time>
+                    {/* <h3 className="text-lg font-semibold text-white">
                 E-Commerce UI code in Tailwind CSS
               </h3> */}
-                  <p className="text-base font-normal text-gray-500">
-                    Cette année, l’entreprise lance un ambitieux projet de
-                    rénovation et d’agrandissement pour doubler sa surface de
-                    stockage à plus de 1700 m². Ce projet vise à élargir encore
-                    davantage la gamme de produits et à améliorer le confort de
-                    travail des collaborateurs. SAMO Aciers continue d’écrire
-                    son histoire en restant fidèle à ses valeurs d’entreprise
-                    familiale, tout en modernisant ses infrastructures pour
-                    répondre aux besoins croissants de ses clients. Grâce à
-                    cette vision, SAMO Aciers demeure un partenaire de confiance
-                    pour ses clients en quête de rapidité et de disponibilité.
-                  </p>
-                </li>
-              </ol>
+                    <p className="text-base font-normal text-gray-500">
+                      Cette année, l’entreprise lance un ambitieux projet de
+                      rénovation et d’agrandissement pour doubler sa surface de
+                      stockage à plus de 1700 m². Ce projet vise à élargir
+                      encore davantage la gamme de produits et à améliorer le
+                      confort de travail des collaborateurs. SAMO Aciers
+                      continue d’écrire son histoire en restant fidèle à ses
+                      valeurs d’entreprise familiale, tout en modernisant ses
+                      infrastructures pour répondre aux besoins croissants de
+                      ses clients. Grâce à cette vision, SAMO Aciers demeure un
+                      partenaire de confiance pour ses clients en quête de
+                      rapidité et de disponibilité.
+                    </p>
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
