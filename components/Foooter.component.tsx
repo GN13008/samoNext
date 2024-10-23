@@ -45,9 +45,19 @@ export default function FooterComponent() {
           </nav>
         </div>
       </footer>
-      <footer className="footer footer-center bg-base-200 text-base-content p-4">
+      <footer className="footer footer-center bg-slate-50 text-base-content p-4">
         <aside>
-          <p>Un site conçu par L'atelier GND © {new Date().getFullYear()}</p>
+          <p>
+            Un site conçu par{" "}
+            <a
+              href="https://ateliergnd.fr/"
+              target="_blank"
+              className="text-primary"
+            >
+              L'atelier GND
+            </a>{" "}
+            © {new Date().getFullYear()}
+          </p>
         </aside>
       </footer>
     </>
