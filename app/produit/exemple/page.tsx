@@ -98,6 +98,7 @@ export default function ExempleProduct() {
                   150, 160, 170, 180, 200,
                 ].map((diam) => (
                   <button
+                    key={diam}
                     type="button"
                     className="border rounded-md py-2 px-4 bg-gray-100 hover:bg-gray-200 focus:bg-indigo-600 focus:text-white"
                   >
@@ -118,6 +119,7 @@ export default function ExempleProduct() {
                   110, 120, 130, 140, 150, 160, 170, 180, 200,
                 ].map((diam) => (
                   <button
+                    key={diam}
                     type="button"
                     className="border rounded-md py-2 px-4 bg-gray-100 hover:bg-gray-200 focus:bg-indigo-600 focus:text-white"
                   >
