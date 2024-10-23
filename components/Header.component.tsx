@@ -115,7 +115,7 @@ const Header = () => {
             </ul>
           </div>
           <a
-            href="/exemple-produit"
+            href="tel:0477930033"
             className="flex align-center items-center gap-2 py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
           >
             <svg
@@ -239,7 +239,7 @@ const Header = () => {
                   </ul>
                 </div>
                 <a
-                  href="/exemple-produit"
+                  href="tel:0477930033"
                   className="flex align-center items-center gap-2 py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   <svg
