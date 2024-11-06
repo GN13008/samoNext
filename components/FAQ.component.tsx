@@ -2,26 +2,54 @@
 
 import { useRef, useState } from "react";
 
-// <FAQ> component is a lsit of <Item> component
-// Just import the FAQ & add your FAQ content to the const faqList
-
 const faqList = [
   {
-    question: "Question 1 assez longie mais ca va",
+    question: "Pouvez-vous livrer la marchandise ?",
     answer: (
-      <div className="space-y-2 leading-relaxed">
-        Réponse 1 ajznealzneamoznan djla cmo^niamc âzco$a a^z ^ù
-      </div>
+      <p>
+        Oui nous travaillons avec des transporteurs fiables et disponible pour
+        répondre à des livraisons rapides.
+      </p>
     ),
   },
   {
-    question: "Question 2",
-    answer: <p>Réponse 2</p>,
+    question: "Est-ce possible de commander directement sur le site ?",
+    answer: (
+      <p>
+        Bien sûr ! Vous avez accès à votre espace client dédié permettant
+        d’obtenir dans un premier temps, vos tarifs personnalisés pour vos
+        chiffrages, puis de les valider en commande par la suite si vous le
+        souhaitez.
+      </p>
+    ),
+  },
+  {
+    question: "Puis-je enlever la marchandise sur place ?",
+    answer: (
+      <p>
+        Oui, notre infrastructure nous permet de recevoir nos fournisseurs et
+        nos clients d’une façon pratique et fluide.
+      </p>
+    ),
+  },
+  {
+    question: "Puis-je commander si je suis particulier ?",
+    answer: (
+      <p>
+        Oui vous pouvez commander et payer en ligne, ou payer au bureau si vous
+        venez directement récupérer votre matière.
+      </p>
+    ),
   },
   {
     question: "J'ai une autre question",
     answer: (
-      <div className="space-y-2 leading-relaxed">Contactez nous à MAIL</div>
+      <div className="space-y-2 leading-relaxed">
+        Contactez nous par mail{" "}
+        <a href="mailto:info@samo-aciers.fr" className="text-primary">
+          info@samo-aciers.fr
+        </a>
+      </div>
     ),
   },
 ];
