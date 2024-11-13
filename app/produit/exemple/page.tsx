@@ -134,29 +134,30 @@ export default function ExempleProduct() {
               <label className="block text-lg font-medium text-gray-700">
                 Longueur (mm)
               </label>
-              <input
+              <p>De tant à taaaaaaant</p>
+              {/* <input
                 type="number"
                 id="longueur"
                 name="longueur"
                 className="mt-2 block w-full border-gray-300 rounded-md shadow-sm"
-              />
+              /> */}
             </div>
             {/* Option certificat */}
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <input
                 id="ccpu"
                 name="ccpu"
                 type="checkbox"
                 className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
               />
-              {/* <label for="ccpu" className="ml-2 text-gray-700">Obtenir le CCPU (+7,00€)</label> */}
+              <label for="ccpu" className="ml-2 text-gray-700">Obtenir le CCPU (+7,00€)</label>
               <label className="ml-2 text-gray-700">
                 Obtenir le CCPU (+7,00€)
               </label>
-            </div>
+            </div> */}
             {/* Quantité */}
-            <div>
-              {/* <label for="quantite" className="block text-lg font-medium text-gray-700">Quantité</label> */}
+            {/* <div>
+              <label for="quantite" className="block text-lg font-medium text-gray-700">Quantité</label>
               <label className="block text-lg font-medium text-gray-700">
                 Quantité
               </label>
@@ -167,14 +168,19 @@ export default function ExempleProduct() {
                 value="1"
                 className="mt-2 block w-full border-gray-300 rounded-md shadow-sm"
               />
-            </div>
+            </div> */}
             {/* Bouton ajouter au devis */}
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700"
-            >
-              Ajouter à mon devis
-            </button>
+            <div className="flex justify-between gap-4 flex-col lg:flex-row">
+              <a
+                href="mailto:info@samo-aciers.fr"
+                className="btn btn-wide btn-primary"
+              >
+                Demander un devis par mail
+              </a>
+              <a href="tel:0477930033" className="btn btn-wide btn-secondary">
+                Demander un devis par téléphone
+              </a>
+            </div>
           </form>
         </div>
       </div>
