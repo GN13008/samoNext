@@ -108,7 +108,7 @@ export default function Home() {
               </ul>
             </div>
             <a
-              href="/exemple-produit"
+              href="/produit/exemple"
               title=""
               className="flex items-center text-base font-medium text-blue-600 hover:underline"
             >
