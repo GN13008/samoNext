@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://samo-aciers.fr
+
+# Sitemaps
+Sitemap: https://samo-aciers.fr/sitemap.xml
