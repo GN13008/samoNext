@@ -73,7 +73,7 @@ export default function Home() {
 
       <div className="hero bg-slate-50" id="produits">
         <div className="hero-content flex flex-col my-8">
-          <div className="w-full flex justify-between align-top">
+          <div className="w-full flex flex-col lg:flex-row justify-between align-top">
             <div className="">
               <h1 className="w-full mb-4 text-3xl md:text-5xl tracking-tight font-extrabold text-gray-800 text-left">
                 Un service sur mesure
@@ -82,7 +82,12 @@ export default function Home() {
                 Nous vendons tous types de produits métallurgiques laminé ou
                 étiré, en rond, plat, carré, tube, et profilé.
               </p>
-              <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
+              <p className="w-full text-left text-base mb-4 lg:hidden">
+                Produits traditionnels en aciers standard, aciers alliés de
+                mécanique, aciers fortement alliés à outils, aciers inoxydables,
+                produits non ferreur, plastique, ...
+              </p>
+              <ul className="hidden lg:block ps-5 mt-2 space-y-1 list-disc list-inside">
                 <li>
                   produits traditionnels en acier standard : tube carré, tube
                   rectangulaire, cornière, poutrelle, tôle, …
@@ -112,7 +117,7 @@ export default function Home() {
               title=""
               className="flex items-center text-base font-medium text-blue-600 hover:underline"
             >
-              tous les aciers
+              Voir tous les aciers
               <svg
                 className="ms-1 h-5 w-5"
                 aria-hidden="true"
