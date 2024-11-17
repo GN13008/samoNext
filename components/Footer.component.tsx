@@ -4,8 +4,8 @@ import { products } from "./data";
 export default function FooterComponent() {
   return (
     <>
-      <footer className="footer bg-slate-50 text-base-content p-10">
-        <div className="footer container px-8 mx-auto">
+      <footer className="footer bg-slate-50 text-base-content p-4 px-8 lg:p-10">
+        <div className="footer container lg:px-8 mx-auto">
           <aside>
             <Image
               src="/logoSamo_transparent.png"

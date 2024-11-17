@@ -30,7 +30,7 @@ const MainHeader = () => {
   return (
     <header className="flex">
       <nav
-        className="container flex items-center justify-between px-8 py-4 mx-auto"
+        className="container flex items-center justify-between px-4 lg:px-8 py-4 mx-auto"
         aria-label="Global"
       >
         <Header />
