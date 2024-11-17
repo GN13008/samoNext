@@ -12,17 +12,17 @@ const faqList = [
       </p>
     ),
   },
-  {
-    question: "Est-ce possible de commander directement sur le site ?",
-    answer: (
-      <p>
-        Bien sûr ! Vous avez accès à votre espace client dédié permettant
-        d’obtenir dans un premier temps, vos tarifs personnalisés pour vos
-        chiffrages, puis de les valider en commande par la suite si vous le
-        souhaitez.
-      </p>
-    ),
-  },
+  // {
+  //   question: "Est-ce possible de commander directement sur le site ?",
+  //   answer: (
+  //     <p>
+  //       Bien sûr ! Vous avez accès à votre espace client dédié permettant
+  //       d’obtenir dans un premier temps, vos tarifs personnalisés pour vos
+  //       chiffrages, puis de les valider en commande par la suite si vous le
+  //       souhaitez.
+  //     </p>
+  //   ),
+  // },
   {
     question: "Puis-je enlever la marchandise sur place ?",
     answer: (
@@ -35,10 +35,11 @@ const faqList = [
   {
     question: "Puis-je commander si je suis particulier ?",
     answer: (
-      <p>
-        Oui vous pouvez commander et payer en ligne, ou payer au bureau si vous
-        venez directement récupérer votre matière.
-      </p>
+      // <p>
+      //   Oui vous pouvez commander et payer en ligne, ou payer au bureau si vous
+      //   venez directement récupérer votre matière.
+      // </p>
+      <p>Oui nous vendons aux professionnelles et aux particuliers.</p>
     ),
   },
   {
@@ -117,7 +118,7 @@ const Item = ({ item }: { item: any }) => {
 const FAQ = () => {
   return (
     <section className="bg-base-100" id="faq">
-      <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+      <div className="py-8 lg:py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-left basis-1/2">
           <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
           <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
