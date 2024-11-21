@@ -106,7 +106,6 @@ const Header = () => {
         componentRef.current &&
         !componentRef.current.contains(event.target)
       ) {
-        console.log("coucou");
         setBigMenuIsOpen(false); // Exécute une action (comme fermer le composant)
       }
     };

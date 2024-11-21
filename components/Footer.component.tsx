@@ -39,9 +39,18 @@ export default function FooterComponent() {
           </nav>
           <nav>
             <h6 className="footer-title">Informations</h6>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
+            <a href="/informations-legales" className="link link-hover">
+              Informations legales
+            </a>
+            <a href="tel:0477930033" className="link link-hover">
+              04 77 93 00 33
+            </a>
+            <a
+              href="mailto:commercial@samo-aciers.fr"
+              className="link link-hover"
+            >
+              commercial@samo-aciers.fr
+            </a>
           </nav>
         </div>
       </footer>

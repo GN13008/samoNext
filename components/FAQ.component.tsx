@@ -47,8 +47,8 @@ const faqList = [
     answer: (
       <div className="space-y-2 leading-relaxed">
         Contactez nous par mail{" "}
-        <a href="mailto:info@samo-aciers.fr" className="text-primary">
-          info@samo-aciers.fr
+        <a href="mailto:commercial@samo-aciers.fr" className="text-primary">
+          commercial@samo-aciers.fr
         </a>
       </div>
     ),
