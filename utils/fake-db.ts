@@ -9,11 +9,10 @@ interface Format {
 }
 export const fakeData: { [format: string]: Format } = {
   rond: {
-    defaultImage: "/acier_rond.png",
+    defaultImage: "/icone_rond.png",
     nuances: {
       s235: {
-        description:
-          "Tubes rodés sans soudure en acier soumis à un recuit de détente pour limiter les tensions – Tolérance H8",
+        description: "Une description sur les ronds",
         dims: [
           {
             label: "Diamètre extérieur (mm)",
@@ -77,7 +76,7 @@ export const fakeData: { [format: string]: Format } = {
       },
     },
   },
-  plat: { defaultImage: "/acier_plat.png", nuances: {} },
-  carre: { defaultImage: "/acier_corniere.png", nuances: {} },
-  hexagone: { defaultImage: "/acier_tube.png", nuances: {} },
+  plat: { defaultImage: "/icone_plat.png", nuances: {} },
+  carre: { defaultImage: "/icone_corniere.png", nuances: {} },
+  hexagone: { defaultImage: "/icone_tube.png", nuances: {} },
 };

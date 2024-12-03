@@ -67,11 +67,12 @@ function Table() {
 export default function ExempleProduct() {
   const pathname = usePathname();
   const args = pathname.split("/");
-  const format = args[2];
-  const nuance = args[3];
-  const data = fakeData[format].nuances[nuance];
+  const formatPath = args[2];
+  const nuancePath = args[3];
+  const format = fakeData[formatPath];
+  const data = format.nuances[nuancePath];
   if (
-    ["rond", "carre", "hexagone", "plat"].indexOf(format) < 0 ||
+    ["rond", "carre", "hexagone", "plat"].indexOf(formatPath) < 0 ||
     data === undefined
   ) {
     notFound();
@@ -89,7 +90,7 @@ export default function ExempleProduct() {
         {/* Image produit */}
         <div>
           <img
-            src="/acier_tube.png"
+            src={format.defaultImage}
             alt="Tube acier rodé"
             className="w-2/3 h-auto mx-auto rounded"
           />
