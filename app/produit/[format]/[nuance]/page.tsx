@@ -1,3 +1,7 @@
+"use client";
+import { fakeData } from "@/utils/fake-db";
+import { notFound, usePathname } from "next/navigation";
+
 function Table() {
   const data = [
     ["Nuance", "E355+SR"],
@@ -61,17 +65,25 @@ function Table() {
 }
 
 export default function ExempleProduct() {
+  const pathname = usePathname();
+  const args = pathname.split("/");
+  const format = args[2];
+  const nuance = args[3];
+  if (
+    ["rond", "carre", "hexagone", "plat"].indexOf(format) < 0 ||
+    fakeData[format][nuance] === undefined
+  ) {
+    notFound();
+  }
+  const data = fakeData[format][nuance];
+
+  console.log("hi", data);
   return (
     <div className="max-w-screen-xl mx-auto p-6">
       {/* {/* Titre principal */}
-      <h1 className="text-3xl font-bold mb-4">
-        Tube acier rodé / galeté H8 – E355+SR
-      </h1>
+      <h1 className="text-3xl font-bold mb-4">Rond S235</h1>
       {/* Description produit */}
-      <p className="text-gray-600 mb-6">
-        Tubes rodés sans soudure en acier soumis à un recuit de détente pour
-        limiter les tensions – Tolérance H8
-      </p>
+      <p className="text-gray-600 mb-6">{data.description}</p>
       {/* Section principale avec image et sélections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Image produit */}
@@ -84,66 +96,47 @@ export default function ExempleProduct() {
         </div>
         {/* Formulaire de sélection */}
         <div>
-          <form action="/ajouter_devis" method="POST" className="space-y-4">
-            {/* Sélection du diamètre intérieur */}
-            <div>
-              <label className="block text-lg font-medium text-gray-700">
-                Diamètre intérieur (mm)
-              </label>
-              {/* <label for="diametre_interieur" className="block text-lg font-medium text-gray-700">Diamètre intérieur (mm)</label> */}
-              <div className="grid grid-cols-6 gap-2 mt-2">
-                {[
-                  20, 25, 25.4, 30, 32, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80,
-                  85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145,
-                  150, 160, 170, 180, 200,
-                ].map((diam) => (
-                  <button
-                    key={diam}
-                    type="button"
-                    className="border rounded-md py-2 px-4 bg-gray-100 hover:bg-gray-200 focus:bg-indigo-600 focus:text-white"
-                  >
-                    {diam}
-                  </button>
-                ))}
+          {/* <form action="/ajouter_devis" method="POST" className="space-y-4"> */}
+          {/* Sélection du diamètre intérieur */}
+          <div className="flex flex-col gap-4 mb-4">
+            {data.dims.map((dim, i) => (
+              <div key={i}>
+                {dim.type == "list" && (
+                  <div className="">
+                    <label className="block text-lg font-medium text-gray-700">
+                      {dim.label}
+                    </label>
+                    {/* <label for="diametre_interieur" className="block text-lg font-medium text-gray-700">Diamètre intérieur (mm)</label> */}
+                    <div className="grid grid-cols-6 gap-2 mt-2">
+                      {dim.values.map((diam: any) => (
+                        <button
+                          key={diam}
+                          type="button"
+                          className="border rounded-md py-2 px-4 bg-gray-100 hover:bg-gray-200 focus:bg-indigo-600 focus:text-white"
+                        >
+                          {diam}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {dim.type == "range" && (
+                  <div className="">
+                    <label className="block text-lg font-medium text-gray-700">
+                      {dim.label}
+                    </label>
+                    <p>
+                      De {dim.values[0]} à {dim.values[1]}
+                    </p>
+                  </div>
+                )}
               </div>
-            </div>
-            {/* Sélection du diamètre extérieur */}
-            <div>
-              {/* <label for="diametre_exterieur" className="block text-lg font-medium text-gray-700">Diamètre extérieur (mm)</label> */}
-              <label className="block text-lg font-medium text-gray-700">
-                Diamètre extérieur (mm)
-              </label>
-              <div className="grid grid-cols-6 gap-2 mt-2">
-                {[
-                  30, 31.4, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 90, 100,
-                  110, 120, 130, 140, 150, 160, 170, 180, 200,
-                ].map((diam) => (
-                  <button
-                    key={diam}
-                    type="button"
-                    className="border rounded-md py-2 px-4 bg-gray-100 hover:bg-gray-200 focus:bg-indigo-600 focus:text-white"
-                  >
-                    {diam}
-                  </button>
-                ))}
-              </div>
-            </div>
-            {/* Longueur */}
-            <div>
-              {/* <label for="longueur" className="block text-lg font-medium text-gray-700">Longueur (mm)</label> */}
-              <label className="block text-lg font-medium text-gray-700">
-                Longueur (mm)
-              </label>
-              <p>De tant à taaaaaaant</p>
-              {/* <input
-                type="number"
-                id="longueur"
-                name="longueur"
-                className="mt-2 block w-full border-gray-300 rounded-md shadow-sm"
-              /> */}
-            </div>
-            {/* Option certificat */}
-            {/* <div className="flex items-center">
+            ))}
+          </div>
+          {/* Sélection du diamètre extérieur */}
+
+          {/* Option certificat */}
+          {/* <div className="flex items-center">
               <input
                 id="ccpu"
                 name="ccpu"
@@ -155,8 +148,8 @@ export default function ExempleProduct() {
                 Obtenir le CCPU (+7,00€)
               </label>
             </div> */}
-            {/* Quantité */}
-            {/* <div>
+          {/* Quantité */}
+          {/* <div>
               <label for="quantite" className="block text-lg font-medium text-gray-700">Quantité</label>
               <label className="block text-lg font-medium text-gray-700">
                 Quantité
@@ -169,28 +162,28 @@ export default function ExempleProduct() {
                 className="mt-2 block w-full border-gray-300 rounded-md shadow-sm"
               />
             </div> */}
-            {/* Bouton ajouter au devis */}
-            <div className="flex justify-between gap-4 flex-col lg:flex-row">
-              <a
-                href="mailto:info@samo-aciers.fr"
-                className="btn btn-wide btn-primary"
-              >
-                Demander un devis par mail
-              </a>
-              <a href="tel:0477930033" className="btn btn-wide btn-secondary">
-                Demander un devis par téléphone
-              </a>
-            </div>
-          </form>
+          {/* Bouton ajouter au devis */}
+          <div className="flex justify-between gap-4 flex-col lg:flex-row">
+            <a
+              href="mailto:info@samo-aciers.fr"
+              className="btn btn-wide btn-primary"
+            >
+              Demander un devis par mail
+            </a>
+            <a href="tel:0477930033" className="btn btn-wide btn-secondary">
+              Demander un devis par téléphone
+            </a>
+          </div>
+          {/* </form> */}
         </div>
       </div>
       {/* Informations complémentaires */}
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <h2 className="text-2xl font-bold mb-4">
           Informations complémentaires
         </h2>
         <Table />
-      </div>
+      </div> */}
     </div>
   );
 }

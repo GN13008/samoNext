@@ -26,55 +26,83 @@ const links = [
 const categories = [
   [
     {
-      href: "/produit/exemple",
+      href: "/produit/rond",
       label: "Rond",
     },
     {
-      href: "/produit/exemple",
+      href: "/produit/plat",
       label: "Plat",
     },
+  ],
+  [
     {
-      href: "/produit/exemple",
+      href: "/produit/carre",
       label: "Carré",
     },
     {
-      href: "/produit/exemple",
+      href: "/produit/tube",
       label: "Tube",
     },
+  ],
+  [
     {
-      href: "/produit/exemple",
+      href: "/produit/profile",
       label: "Profilé",
     },
   ],
-  [
-    {
-      href: "/produit/exemple",
-      label: "Acier standard",
-    },
-    {
-      href: "/produit/exemple",
-      label: "Aciers alliés de mécanique",
-    },
-    {
-      href: "/produit/exemple",
-      label: "Aciers fortement alliés à outils",
-    },
-  ],
-  [
-    {
-      href: "/produit/exemple",
-      label: "Aciers inoxydables",
-    },
-    {
-      href: "/produit/exemple",
-      label: "Produit non ferreux",
-    },
-    {
-      href: "/produit/exemple",
-      label: "Plastique",
-    },
-  ],
 ];
+// const categories = [
+//   [
+//     {
+//       href: "/produit/rond",
+//       label: "Rond",
+//     },
+//     {
+//       href: "/produit/plat",
+//       label: "Plat",
+//     },
+//     {
+//       href: "/produit/carre",
+//       label: "Carré",
+//     },
+//     {
+//       href: "/produit/tube",
+//       label: "Tube",
+//     },
+//     {
+//       href: "/produit/profile",
+//       label: "Profilé",
+//     },
+//   ],
+//   [
+//     {
+//       href: "/produit/exemple",
+//       label: "Acier standard",
+//     },
+//     {
+//       href: "/produit/exemple",
+//       label: "Aciers alliés de mécanique",
+//     },
+//     {
+//       href: "/produit/exemple",
+//       label: "Aciers fortement alliés à outils",
+//     },
+//   ],
+//   [
+//     {
+//       href: "/produit/exemple",
+//       label: "Aciers inoxydables",
+//     },
+//     {
+//       href: "/produit/exemple",
+//       label: "Produit non ferreux",
+//     },
+//     {
+//       href: "/produit/exemple",
+//       label: "Plastique",
+//     },
+//   ],
+// ];
 
 // const cta = <ButtonSignin extraStyle="btn-primary" />;
 
@@ -276,7 +304,7 @@ const Header = () => {
                 {categorie.map((produit) => (
                   <li>
                     <a
-                      href="/produit/exemple"
+                      href={produit.href}
                       className="block p-3 rounded-lg hover:bg-gray-50 "
                     >
                       <div className="font-semibold">{produit.label}</div>
@@ -394,7 +422,7 @@ const Header = () => {
                           {categorie.map((produit) => (
                             <li>
                               <a
-                                href="/produit/exemple"
+                                href={produit.href}
                                 className="block py-3 rounded-lg hover:bg-gray-50 "
                               >
                                 <div className="font-semibold">

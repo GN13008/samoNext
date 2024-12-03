@@ -69,7 +69,7 @@ export default function ProductsSection() {
             <div className="w-1/2 lg:w-1/5 p-4">
               <a
                 key={i}
-                href="/produit/exemple"
+                href={prod.link}
                 className="relative flex flex-col justify-center overflow-hidden rounded-xl shadow-md"
               >
                 <div className="group relative m-0 flex rounded-xl shadow-2xl sm:mx-auto sm:max-w-lg">
