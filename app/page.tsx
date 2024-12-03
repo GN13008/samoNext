@@ -42,7 +42,7 @@ export default function Home() {
               Votre fournisseur de produits métallurgiques ferreux et
               non-ferreux.
             </p>
-            <a href="/produit/exemple">
+            <a href="#produits">
               <button className="btn btn-md btn-primary text-white">
                 Découvrir
               </button>
