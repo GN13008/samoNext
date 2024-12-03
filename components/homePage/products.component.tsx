@@ -21,7 +21,7 @@ export default function ProductsSection() {
               rectangulaire, cornière, poutrelle, tôle, …
             </li>
             <li>
-              aciers alliés de mécaniques : C45, C35, S235, S355, 16NC8, 42CD4R,
+              aciers alliés de mécaniques : C45, C35, S235, S355, 16NC6, 42CD4R,
               42CD4T, ETG100, …
             </li>
             <li>

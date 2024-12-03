@@ -69,13 +69,13 @@ export default function ExempleProduct() {
   const args = pathname.split("/");
   const format = args[2];
   const nuance = args[3];
+  const data = fakeData[format].nuances[nuance];
   if (
     ["rond", "carre", "hexagone", "plat"].indexOf(format) < 0 ||
-    fakeData[format][nuance] === undefined
+    data === undefined
   ) {
     notFound();
   }
-  const data = fakeData[format][nuance];
 
   console.log("hi", data);
   return (

@@ -9,7 +9,7 @@ export default function ExempleProduct({
 }) {
   const router = useRouter();
   const pathname = usePathname();
-  const nuances = Object.keys(fakeData[params.format]);
+  const nuances = Object.keys(fakeData[params.format].nuances);
   return (
     <div className="max-w-screen-xl mx-auto p-6">
       {/* {/* Titre principal */}
@@ -23,38 +23,45 @@ export default function ExempleProduct({
         {/* Image produit */}
         <div>
           <img
-            src="/acier_tube.png"
+            src={fakeData[params.format].defaultImage}
             alt="Tube acier rodé"
             className="w-2/3 h-auto mx-auto rounded"
           />
         </div>
-        <select
-          onChange={(e) => {
-            const selectedValue = e.target.value;
-            if (selectedValue) {
-              // Conserve l'URL actuelle et ajoute `selectedValue`
-              const newPath = `${pathname}/${selectedValue}`;
-              router.push(newPath); // Met à jour l'URL
-            }
-          }}
-          className="select select-primary w-full max-w-xs"
-        >
-          {nuances.length ? (
-            <option disabled selected>
-              Nuance de {params.format}
-            </option>
-          ) : (
-            <option disabled selected>
-              Pas de nuance disponible pour {params.format}
-            </option>
-          )}
+        <div className="">
+          <select
+            onChange={(e) => {
+              const selectedValue = e.target.value;
+              if (selectedValue) {
+                // Conserve l'URL actuelle et ajoute `selectedValue`
+                const newPath = `${pathname}/${selectedValue}`;
+                router.push(newPath); // Met à jour l'URL
+              }
+            }}
+            className="select select-primary w-full max-w-xs"
+          >
+            {nuances.length ? (
+              <option disabled selected>
+                Nuance de {params.format}
+              </option>
+            ) : (
+              <option disabled selected>
+                Pas de nuance disponible pour {params.format}
+              </option>
+            )}
 
-          {nuances.map((nuance: any, index: any) => (
-            <option key={index} value={nuance}>
-              {nuance}
-            </option>
-          ))}
-        </select>
+            {nuances.map((nuance: any, index: any) => (
+              <option key={index} value={nuance}>
+                {nuance}
+              </option>
+            ))}
+          </select>
+          {!nuances.length && (
+            <div className="mt-4">
+              Site en cours de construction ! Les nuances arrivent.
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

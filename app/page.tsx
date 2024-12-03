@@ -1,27 +1,7 @@
 import FAQ from "@/components/FAQ.component";
 import EquipementsSection from "@/components/homePage/equipements.component";
 import ProductsSection from "@/components/homePage/products.component";
-import TimeLineComponent from "@/components/homePage/timeLine.component";
 import ValuesSection from "@/components/homePage/values.component";
-import { ReactElement } from "react";
-
-function InfoCardComponent({
-  svg,
-  title,
-  content,
-}: {
-  svg: ReactElement;
-  title: any;
-  content: any;
-}) {
-  return (
-    <div className="card bg-base-100 shadow-xl rounded-box px-8 py-4 flex-cols gap-2 h-full">
-      {svg}
-      <h2 className="card-title">{title}</h2>
-      <p>{content}</p>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -32,7 +12,7 @@ export default function Home() {
           backgroundImage: "url(/home3.jpg)",
         }}
       >
-        <div className="hero-overlay bg-opacity-40"></div>
+        <div className="hero-overlay bg-opacity-45"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-xl">
             <p className="mb-5 text-7xl font-mono font-bold text-white">
