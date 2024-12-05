@@ -7,7 +7,7 @@ const faqList = [
     question: "Pouvez-vous livrer la marchandise ?",
     answer: (
       <p>
-        Oui nous travaillons avec des transporteurs fiables et disponible pour
+        Oui nous travaillons avec des transporteurs fiables et disponibles pour
         répondre à des livraisons rapides.
       </p>
     ),
@@ -39,7 +39,7 @@ const faqList = [
       //   Oui vous pouvez commander et payer en ligne, ou payer au bureau si vous
       //   venez directement récupérer votre matière.
       // </p>
-      <p>Oui nous vendons aux professionnelles et aux particuliers.</p>
+      <p>Oui nous vendons aux professionnels et aux particuliers.</p>
     ),
   },
   {

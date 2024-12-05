@@ -34,7 +34,7 @@ export default function Home() {
       <div className="hero">
         <div className="hero-content my-2 lg:my-12 flex-col lg:flex-row">
           <h2 className="md:hidden">
-            Une Histoire Familiale de Confiance et de longévité
+            Une histoire familiale de confiance et de longévité
           </h2>
           <img
             src="/3d_samo.jpg"
@@ -42,7 +42,7 @@ export default function Home() {
           />
           <div>
             <h2 className="mb-4 hidden md:inline">
-              Une Histoire Familiale de Confiance et de longévité
+              Une histoire familiale de confiance et de longévité
             </h2>
             <p className="py-2 lg:py-6">
               Depuis 1958, SAMO Aciers accompagne ses clients avec expertise et
@@ -242,7 +242,7 @@ export default function Home() {
                     L’esprit familial de l’entreprise se renforce en 2018 avec
                     l’arrivée de Maxime BRUYERE, fils cadet de Jean-Claude. Fort
                     de son CV (Master de Commerce International) et ses 10 ans
-                    d’expérience professionnelles dans la mécanique et le
+                    d’expériences professionnelles dans la mécanique et le
                     commerce dans l’industrie, il booste ainsi l’activité de
                     SAMO Aciers.
                   </p>

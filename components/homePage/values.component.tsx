@@ -71,7 +71,7 @@ export default function ValuesSection() {
           <h3 className="mb-2 text-xl font-bold">Disponibilité</h3>
           <p className="text-gray-500">
             Nos installations, notre organisation optimisée et notre large gamme
-            de produits métallurgiques, associée à un service client réactif,
+            de produits métallurgiques, associés à un service client réactif,
             fait de SAMO Aciers un partenaire de choix pour tous vos projets.
           </p>
         </div>
