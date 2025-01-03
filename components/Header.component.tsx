@@ -28,26 +28,31 @@ const categories = [
     {
       href: "/produit/rond",
       label: "Rond",
+      smallTxt: "Large gamme de rond acier, ...",
     },
     {
       href: "/produit/plat",
       label: "Plat",
+      smallTxt: "Large gamme de plat acier, ...",
     },
   ],
   [
     {
       href: "/produit/carre",
       label: "Carré",
+      smallTxt: "Large gamme de carré acier, ...",
     },
     {
       href: "/produit/tube",
       label: "Tube",
+      smallTxt: "Large gamme de tube acier, ...",
     },
   ],
   [
     {
       href: "/produit/profile",
       label: "Profilé",
+      smallTxt: "Large gamme de profilé acier, ...",
     },
   ],
 ];
@@ -309,7 +314,7 @@ const Header = () => {
                     >
                       <div className="font-semibold">{produit.label}</div>
                       <span className="text-sm text-gray-500 ">
-                        Un petit texte sur le produit
+                        {produit.smallTxt}
                       </span>
                     </a>
                   </li>
@@ -429,7 +434,7 @@ const Header = () => {
                                   {produit.label}
                                 </div>
                                 <span className="text-sm text-gray-500 ">
-                                  Un petit texte sur le produit
+                                  {produit.smallTxt}
                                 </span>
                               </a>
                             </li>

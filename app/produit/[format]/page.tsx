@@ -17,7 +17,9 @@ export default function ExempleProduct({
         Selectionnez une Nuance de {params.format}
       </h1>
       {/* Description produit */}
-      <p className="text-gray-600 mb-6">Description du format</p>
+      <p className="text-gray-600 mb-6">
+        {fakeData[params.format].description}
+      </p>
       {/* Section principale avec image et sélections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Image produit */}

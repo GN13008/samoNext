@@ -5,11 +5,13 @@ interface NuanceData {
 
 interface Format {
   defaultImage: string;
+  description: string;
   nuances: { [nuance: string]: NuanceData };
 }
 export const fakeData: { [format: string]: Format } = {
   rond: {
     defaultImage: "/icone_rond.png",
+    description: "Une large gamme de rond: acier, ...",
     nuances: {
       s235: {
         description: "Une description sur les ronds",
@@ -76,7 +78,19 @@ export const fakeData: { [format: string]: Format } = {
       },
     },
   },
-  plat: { defaultImage: "/icone_plat.png", nuances: {} },
-  carre: { defaultImage: "/icone_corniere.png", nuances: {} },
-  hexagone: { defaultImage: "/icone_tube.png", nuances: {} },
+  plat: {
+    defaultImage: "/icone_plat.png",
+    description: "Une large gamme de plat: acier, ...",
+    nuances: {},
+  },
+  carre: {
+    defaultImage: "/icone_corniere.png",
+    description: "Une large gamme de carré: acier, ...",
+    nuances: {},
+  },
+  hexagone: {
+    defaultImage: "/icone_tube.png",
+    description: "Une large gamme de hexagone: acier, ...",
+    nuances: {},
+  },
 };
