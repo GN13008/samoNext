@@ -10,7 +10,7 @@ interface Format {
 }
 export const fakeData: { [format: string]: Format } = {
   rond: {
-    defaultImage: "/icone_rond.png",
+    defaultImage: "/round_bars.svg",
     description: "Une large gamme de rond: acier, ...",
     nuances: {
       s235: {
@@ -79,17 +79,17 @@ export const fakeData: { [format: string]: Format } = {
     },
   },
   plat: {
-    defaultImage: "/icone_plat.png",
+    defaultImage: "/flat_bars.svg",
     description: "Une large gamme de plat: acier, ...",
     nuances: {},
   },
   carre: {
-    defaultImage: "/icone_corniere.png",
+    defaultImage: "/square_bars.svg",
     description: "Une large gamme de carré: acier, ...",
     nuances: {},
   },
   hexagone: {
-    defaultImage: "/icone_tube.png",
+    defaultImage: "/seamless_round_tubes.svg",
     description: "Une large gamme de hexagone: acier, ...",
     nuances: {},
   },

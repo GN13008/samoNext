@@ -28,11 +28,13 @@ const categories = [
     {
       href: "/produit/rond",
       label: "Rond",
+      icons: "/round_bars.svg",
       smallTxt: "Large gamme de rond acier, ...",
     },
     {
       href: "/produit/plat",
       label: "Plat",
+      icons: "/flat_bars.svg",
       smallTxt: "Large gamme de plat acier, ...",
     },
   ],
@@ -40,11 +42,13 @@ const categories = [
     {
       href: "/produit/carre",
       label: "Carré",
+      icons: "/square_bars.svg",
       smallTxt: "Large gamme de carré acier, ...",
     },
     {
       href: "/produit/tube",
       label: "Tube",
+      icons: "/seamless_round_tubes.svg",
       smallTxt: "Large gamme de tube acier, ...",
     },
   ],
@@ -52,6 +56,7 @@ const categories = [
     {
       href: "/produit/profile",
       label: "Profilé",
+      icons: "/t_profiles.svg",
       smallTxt: "Large gamme de profilé acier, ...",
     },
   ],
@@ -310,12 +315,19 @@ const Header = () => {
                   <li>
                     <a
                       href={produit.href}
-                      className="block p-3 rounded-lg hover:bg-gray-50 "
+                      className="flex gap-2 items-center p-3 rounded-lg hover:bg-gray-50 "
                     >
+                      <div className="flex items-center justify-center w-20 h-20">
+                        <img
+                          src={produit.icons}
+                          alt={produit.href}
+                          className="w-16 h-16"
+                        />
+                      </div>
                       <div className="font-semibold">{produit.label}</div>
-                      <span className="text-sm text-gray-500 ">
+                      {/* <span className="text-sm text-gray-500 ">
                         {produit.smallTxt}
-                      </span>
+                      </span> */}
                     </a>
                   </li>
                 ))}
@@ -428,6 +440,24 @@ const Header = () => {
                             <li>
                               <a
                                 href={produit.href}
+                                className="flex gap-2 items-center p-3 rounded-lg hover:bg-gray-50 "
+                              >
+                                <div className="flex items-center justify-center w-16 h-16">
+                                  <img
+                                    src={produit.icons}
+                                    alt={produit.href}
+                                    className="w-12 h-12"
+                                  />
+                                </div>
+                                <div className="font-semibold">
+                                  {produit.label}
+                                </div>
+                                {/* <span className="text-sm text-gray-500 ">
+                        {produit.smallTxt}
+                      </span> */}
+                              </a>
+                              {/* <a
+                                href={produit.href}
                                 className="block py-3 rounded-lg hover:bg-gray-50 "
                               >
                                 <div className="font-semibold">
@@ -436,7 +466,7 @@ const Header = () => {
                                 <span className="text-sm text-gray-500 ">
                                   {produit.smallTxt}
                                 </span>
-                              </a>
+                              </a> */}
                             </li>
                           ))}
                         </ul>
