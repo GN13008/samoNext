@@ -1,5 +1,6 @@
 "use client";
 import { fakeData } from "@/utils/fake-db";
+import { capitalizeFirstLetter } from "@/utils/utils";
 import { notFound, usePathname } from "next/navigation";
 
 function Table() {
@@ -77,12 +78,12 @@ export default function ExempleProduct() {
   ) {
     notFound();
   }
-
-  console.log("hi", data);
   return (
     <div className="max-w-screen-xl mx-auto p-6">
       {/* {/* Titre principal */}
-      <h1 className="text-3xl font-bold mb-4">Rond S235</h1>
+      <h1 className="text-3xl font-bold mb-4">
+        {capitalizeFirstLetter(formatPath)} {nuancePath}
+      </h1>
       {/* Description produit */}
       <p className="text-gray-600 mb-6">{data.description}</p>
       {/* Section principale avec image et sélections */}

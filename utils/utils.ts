@@ -10,7 +10,14 @@ import { redirect } from "next/navigation";
 export function encodedRedirect(
   type: "error" | "success",
   path: string,
-  message: string,
+  message: string
 ) {
   return redirect(`${path}?${type}=${encodeURIComponent(message)}`);
+}
+
+export function capitalizeFirstLetter(str: string) {
+  if (typeof str !== "string" || str.length === 0) {
+    return str; // Retourne l'original si ce n'est pas une chaîne ou si elle est vide
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
