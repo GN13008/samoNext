@@ -89,7 +89,7 @@ export const fakeData: { [format: string]: Format } = {
     nuances: {},
   },
   tube: {
-    defaultImage: "/welded_construction_tubes_gray.svg",
+    defaultImage: "/seamless_round_tubes_gray.svg",
     description: "Une large gamme de hexagone: acier, ...",
     nuances: {},
   },

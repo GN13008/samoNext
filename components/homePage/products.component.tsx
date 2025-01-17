@@ -84,9 +84,9 @@ export default function ProductsSection() {
                     <h1 className="text-l lg:text-2xl font-semibold text-white">
                       {prod.title}
                     </h1>
-                    <h1 className="hidden lg:block text-sm font-light text-gray-200">
+                    {/* <h1 className="hidden lg:block text-sm font-light text-gray-200">
                       {prod.content}
-                    </h1>
+                    </h1> */}
                   </div>
                 </div>
               </a>
