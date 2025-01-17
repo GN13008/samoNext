@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_5" data-name="Calque 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b4b2b2;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+        stroke: #000;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: .25px;
+      }
+
+      .cls-3 {
+        fill: #d8d8d8;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="19.77 49.66 19.77 55.21 1 55.21 1 19.77 6.97 19.77 6.97 49.66 19.77 49.66"/>
+  <polygon class="cls-1" points="58 32.26 58 37.84 19.77 55.21 19.77 49.66 58 32.26"/>
+  <polygon class="cls-1" points="58 32.26 19.77 49.66 6.97 49.66 45.49 32.28 58 32.26"/>
+  <polygon class="cls-1" points="45.49 3.79 45.49 32.28 6.97 49.66 6.97 19.77 45.49 3.79"/>
+  <polygon class="cls-1" points="45.49 3.79 6.97 19.77 1 19.77 39.83 3.79 45.49 3.79"/>
+  <path class="cls-2" d="m14.28,48.26s-.05-.02-.06-.04c-.02-.04,0-.08.04-.09l32.52-14.45s.08,0,.09.04c.02.04,0,.08-.04.09l-32.52,14.45s-.02,0-.03,0Z"/>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_10" data-name="Calque 10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #393939;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #b4b2b2;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #d8d8d8;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x="1.45" y="27.05" width="26.93" height="15.62"/>
+  <rect class="cls-4" x="3.59" y="29.19" width="22.64" height="11.33"/>
+  <polygon class="cls-1" points="58 14.39 58 30.01 28.38 42.66 28.38 27.05 31.07 25.89 58 14.39"/>
+  <polygon class="cls-1" points="58 14.39 31.07 25.89 28.38 27.05 1.45 27.05 1.99 26.81 27.92 15.73 31.07 14.39 58 14.39"/>
+  <path class="cls-2" d="m10.12,25.53s-.03-.01-.04-.03c0-.02,0-.05.02-.06l21.45-9.14s.05,0,.06.02c0,.02,0,.05-.02.06l-21.45,9.14s-.01,0-.02,0Z"/>
+  <path class="cls-2" d="m4.72,39.79s-.03,0-.03-.02c0-.02,0-.04.02-.05l17.77-7.12s.04,0,.05.02c0,.02,0,.04-.02.05l-17.77,7.12s0,0-.01,0Z"/>
+</svg>

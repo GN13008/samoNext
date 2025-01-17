@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_5" data-name="Calque 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: .25px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #000;
+        stroke-width: .5px;
+      }
+
+      .cls-3 {
+        fill: #d8d8d8;
+      }
+
+      .cls-4 {
+        fill: #b4b2b2;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m29.27,43.27s-.03-.01-.04-.03c0-.02,0-.05.02-.06l20.97-9.09s.05,0,.06.02c0,.02,0,.05-.02.06l-20.97,9.09s-.01,0-.02,0Z"/>
+  <polygon class="cls-4" points="51.4 11.46 32.6 19.27 21.67 23.81 7.64 23.78 7.64 23.78 37.35 11.43 37.37 11.43 51.4 11.46"/>
+  <polygon class="cls-3" points="28.67 35.71 21.63 47.57 7.6 47.54 .6 35.64 7.64 23.78 21.67 23.81 21.68 23.81 28.67 35.71"/>
+  <polygon class="cls-4" points="58.4 23.09 51.36 34.68 21.63 47.57 28.67 35.71 36.07 32.57 58.4 23.09"/>
+  <polygon class="cls-4" points="58.4 23.09 36.07 32.57 28.67 35.71 21.68 23.81 21.67 23.81 32.6 19.27 51.4 11.46 51.4 11.46 58.4 23.09"/>
+  <path class="cls-1" d="m14.7,21.67s-.03-.01-.04-.03c0-.02,0-.05.02-.06l21.36-8.77s.05,0,.06.02c0,.02,0,.05-.02.06l-21.36,8.77s-.01,0-.02,0Z"/>
+</svg>

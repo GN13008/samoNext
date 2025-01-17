@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_10" data-name="Calque 10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b4b2b2;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: #d8d8d8;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="1.11" y="36.73" width="27.04" height="1.69"/>
+  <polygon class="cls-1" points="57.89 25.61 57.89 27.27 28.15 38.42 28.15 36.73 31.22 35.57 57.89 25.61"/>
+  <polygon class="cls-1" points="57.89 25.58 30.85 35.71 28.15 36.73 1.11 36.73 1.65 36.52 27.69 26.76 30.85 25.58 57.89 25.58"/>
+</svg>
