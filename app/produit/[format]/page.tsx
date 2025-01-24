@@ -1,5 +1,6 @@
 "use client";
 import { fakeData } from "@/utils/fake-db";
+import { capitalizeFirstLetter } from "@/utils/utils";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function ExempleProduct({
@@ -12,6 +13,14 @@ export default function ExempleProduct({
   const nuances = Object.keys(fakeData[params.format].nuances);
   return (
     <div className="max-w-screen-xl mx-auto p-6">
+      <div className="breadcrumbs text-xs sm:text-sm">
+        <ul>
+          <li>
+            <a href={"/"}>Accueil</a>
+          </li>
+          <li>Sélection de nuance - {capitalizeFirstLetter(params.format)}</li>
+        </ul>
+      </div>
       {/* {/* Titre principal */}
       <h1 className="text-3xl font-bold mb-4">
         Selectionnez une Nuance de {params.format}

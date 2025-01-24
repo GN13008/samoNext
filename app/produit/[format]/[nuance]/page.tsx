@@ -80,6 +80,21 @@ export default function ExempleProduct() {
   }
   return (
     <div className="max-w-screen-xl mx-auto p-6">
+      <div className="breadcrumbs text-xs sm:text-sm">
+        <ul>
+          <li>
+            <a href={"/"}>Accueil</a>
+          </li>
+          <li>
+            <a href={"/produit/" + formatPath}>
+              Sélection de nuance - {capitalizeFirstLetter(formatPath)}
+            </a>
+          </li>
+          <li>
+            {capitalizeFirstLetter(formatPath)} {nuancePath}
+          </li>
+        </ul>
+      </div>
       {/* {/* Titre principal */}
       <h1 className="text-3xl font-bold mb-4">
         {capitalizeFirstLetter(formatPath)} {nuancePath}
