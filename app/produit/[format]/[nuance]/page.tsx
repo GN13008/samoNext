@@ -124,7 +124,7 @@ export default function ExempleProduct() {
                       {dim.label}
                     </label>
                     {/* <label for="diametre_interieur" className="block text-lg font-medium text-gray-700">Diamètre intérieur (mm)</label> */}
-                    <div className="grid grid-cols-6 gap-2 mt-2">
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-2 pr-2 max-h-64 sm:max-h-96 overflow-auto">
                       {dim.values.map((diam: any) => (
                         <button
                           key={diam}
