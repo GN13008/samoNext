@@ -39,7 +39,7 @@ export default function ProductsSection() {
           </ul>
         </div>
         <a
-          href="/produit/exemple"
+          href="/produit"
           title=""
           className="flex items-center text-base font-medium text-blue-600 hover:underline"
         >
