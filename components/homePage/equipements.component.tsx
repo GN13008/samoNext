@@ -26,9 +26,19 @@ export default function EquipementsSection() {
               </div> */}
           <h3 className="mb-2 text-xl font-bold">Scies</h3>
           <p className="text-gray-500">
-            Kasto SSB 260 A2 capacité de coupe Ø260 maxi <br /> Kasto SSB 260 A2
-            capacité de coupe Ø260 maxi <br /> Kasto WIN A 3.3 capacité de coupe
-            Ø330 maxi <br /> Amada HA400 capacité de coupe Ø400 maxi <br />
+            Kasto SSB 260 A2 capacité de coupe Ø260 maxi
+          </p>
+          <p className="text-gray-500">
+            Kasto SSB 260 A2 capacité de coupe Ø260 maxi
+          </p>
+          <p className="text-gray-500">
+            Kasto WIN A 3.3 capacité de coupe Ø330 maxi
+          </p>
+          <p className="text-gray-500">
+            Kasto PSB 4 capacité de coupe Ø400 maxi
+          </p>
+          <p className="text-gray-500">
+            Amada HA400 capacité de coupe Ø400 maxi
           </p>
         </div>
         <div>
@@ -47,11 +57,9 @@ export default function EquipementsSection() {
                 </svg>
               </div> */}
           <h3 className="mb-2 text-xl font-bold">Pont roulants</h3>
-          <p className="text-gray-500">
-            KONE Pont Roulant 3.2T <br />
-            SERAL Pont Roulant 5T <br />
-            SERAL Pont Roulant 5T <br />
-          </p>
+          <p className="text-gray-500">KONE Pont Roulant 3.2T</p>
+          <p className="text-gray-500">SERAL Pont Roulant 5T</p>
+          <p className="text-gray-500">SERAL Pont Roulant 5T</p>
         </div>
         <div>
           {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12">
@@ -68,8 +76,9 @@ export default function EquipementsSection() {
                   />
                 </svg>
               </div> */}
-          <h3 className="mb-2 text-xl font-bold">Chariots élévateur</h3>
+          <h3 className="mb-2 text-xl font-bold">Chariots élévateurs</h3>
           <p className="text-gray-500">KOMATSU 2.5T</p>
+          <p className="text-gray-500">CESAB B635 3.5T</p>
         </div>
       </div>
     </>
