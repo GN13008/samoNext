@@ -1,7 +1,6 @@
-"use client";
 import { fakeData } from "@/utils/fake-db";
 import { capitalizeFirstLetter } from "@/utils/utils";
-import { notFound, usePathname } from "next/navigation";
+import { notFound } from "next/navigation";
 
 function Table() {
   const data = [
@@ -65,11 +64,42 @@ function Table() {
   );
 }
 
-export default function ExempleProduct() {
-  const pathname = usePathname();
-  const args = pathname.split("/");
-  const formatPath = args[2];
-  const nuancePath = args[3];
+import type { Metadata, ResolvingMetadata } from "next";
+type Props = {
+  params: { format: string; nuance: string };
+};
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // Fetch product details (simulated)
+  // const product = await fetchProduct(params.id)
+
+  return {
+    title: "Acheter de l'acier " + params.format + " nuance " + params.nuance,
+    // description: product.description,
+    // openGraph: {
+    //   title: product.name,
+    //   description: product.description,
+    //   images: [product.image],
+    // },
+  };
+}
+
+export default function ExempleProduct({
+  params,
+}: {
+  params: {
+    format: string;
+    nuance: string;
+  };
+}) {
+  // const pathname = usePathname();
+  // const args = pathname.split("/");
+  const formatPath = params.format;
+  const nuancePath = params.nuance;
+  // const formatPath = args[2];
+  // const nuancePath = args[3];
   const format = fakeData[formatPath];
   const data = format.nuances[nuancePath];
   if (

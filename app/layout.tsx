@@ -13,7 +13,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Samo aciers",
-  description: "revendeur d'aciers au détails",
+  description:
+    "SAMO aciers, revendeur d'aciers au détails. Situé à coté de Saint etienne (lyon), nous pouvons expédier tous types de produits métallurgiques dans toute la france.",
 };
 
 export default function RootLayout({

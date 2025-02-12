@@ -1,4 +1,3 @@
-"use client";
 import { fakeData } from "@/utils/fake-db";
 import { capitalizeFirstLetter } from "@/utils/utils";
 
