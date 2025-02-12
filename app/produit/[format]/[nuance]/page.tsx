@@ -212,7 +212,7 @@ export default function ExempleProduct({
           {/* Bouton ajouter au devis */}
           <div className="flex justify-between gap-4 flex-col lg:flex-row">
             <a
-              href="mailto:info@samo-aciers.fr"
+              href="mailto:commercial@samo-aciers.fr"
               className="btn btn-wide btn-primary"
             >
               Demander un devis par mail
