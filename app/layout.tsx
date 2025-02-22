@@ -4,6 +4,8 @@ import "./globals.css";
 import FooterComponent from "@/components/Footer.component";
 import MainHeader from "@/components/MainHeader.component";
 import { Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -24,6 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="winter">
+      <Analytics />
+      <SpeedInsights />
       <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>
           <MainHeader />
