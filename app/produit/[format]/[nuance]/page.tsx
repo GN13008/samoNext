@@ -137,7 +137,7 @@ export default function ExempleProduct({
         <div>
           <img
             src={format.defaultImage}
-            alt="Tube acier rodé"
+            alt={format.description}
             className="w-2/3 h-auto mx-auto rounded"
           />
         </div>

@@ -66,7 +66,7 @@ export default function ProductsSection() {
       <div className="flex flex-row flex-wrap w-full mx-auto content-center items-center">
         {products.map((prod, i) => {
           return (
-            <div className="w-1/2 lg:w-1/5 p-4">
+            <div className="w-1/2 lg:w-1/4 p-4">
               <a
                 key={i}
                 href={prod.link}

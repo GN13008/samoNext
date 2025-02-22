@@ -54,9 +54,9 @@ const categories = [
   ],
   [
     {
-      href: "/produit/profile",
-      label: "Profilé",
-      icons: "/t_profiles.svg",
+      href: "/produit/hexagone",
+      label: "Hexagone",
+      icons: "/hexagon_bars.svg",
       smallTxt: "Large gamme de profilé acier, ...",
     },
   ],

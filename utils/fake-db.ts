@@ -1753,7 +1753,7 @@ export const fakeData: { [format: string]: Format } = {
     nuances: {},
   },
   hexagone: {
-    defaultImage: "/seamless_round_tubes_gray.svg",
+    defaultImage: "/hexagon_bars.svg",
     description: "Une large gamme de hexagone: acier, ...",
     nuances: {
       "E335GC-h11": {

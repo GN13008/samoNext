@@ -8,7 +8,7 @@ export default function RootLayout({
   params: { format: string };
 }>) {
   // TODO GET ALL FORMAT FROM DB
-  if (["rond", "carre", "tube", "plat"].indexOf(params.format) < 0) {
+  if (["rond", "carre", "plat", "hexagone"].indexOf(params.format) < 0) {
     notFound();
   }
   return <div className="">{children}</div>;
