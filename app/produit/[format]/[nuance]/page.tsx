@@ -146,6 +146,9 @@ export default function ExempleProduct({
           {/* <form action="/ajouter_devis" method="POST" className="space-y-4"> */}
           {/* Sélection du diamètre intérieur */}
           <div className="flex flex-col gap-4 mb-4">
+            <label className="block text-xl font-semibold text-gray-700">
+              {data.dims.length ? "Dimensions disponibles :" : ""}
+            </label>
             {data.dims.map((dim, i) => (
               <div key={i}>
                 {dim.type == "list" && (
