@@ -36,6 +36,9 @@ export default function FooterComponent() {
             <a className="link link-hover" href="/#faq">
               FAQ
             </a>
+            <a className="link link-hover" href="/contact">
+              Contact
+            </a>
           </nav>
           <nav>
             <h6 className="footer-title">Informations</h6>

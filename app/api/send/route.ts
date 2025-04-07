@@ -11,8 +11,8 @@ export async function POST(req: any) {
     // commercial@samo-aciers.fr
     const { data, error } = await resend.emails.send({
       from: `noreply@samo-aciers.fr`,
-      to: ["negro.guillaume.dev@gmail.com"],
-      subject: `Demande de contact samo-acier`,
+      to: [process.env.RESEND_MAIL_TO as string],
+      subject: `Demande de contact depuis samo-acier`,
       react: EmailTemplate({ name, email, message }),
     });
 
