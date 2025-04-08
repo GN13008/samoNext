@@ -4,7 +4,9 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
+    lastName: "",
+    firstName: "",
+    company: "",
     email: "",
     message: "",
   });
@@ -31,7 +33,13 @@ export default function ContactForm() {
       }
 
       setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        lastName: "",
+        firstName: "",
+        company: "",
+        email: "",
+        message: "",
+      });
     } catch (error: any) {
       console.error(error.message);
     }
@@ -48,9 +56,27 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
-          name="name"
-          placeholder="Nom complet"
-          value={formData.name}
+          name="lastName"
+          placeholder="Nom"
+          value={formData.lastName}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+          required
+        />
+        <input
+          type="text"
+          name="firstName"
+          placeholder="Prénom"
+          value={formData.firstName}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+          required
+        />
+        <input
+          type="text"
+          name="company"
+          placeholder="Entreprise"
+          value={formData.company}
           onChange={handleChange}
           className="w-full p-2 border rounded"
           required
