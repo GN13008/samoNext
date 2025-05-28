@@ -155,57 +155,62 @@ export default function DevisForm({
                 )}
               </div>
             ))}
-            <label className="block text-lg font-medium text-gray-700">
-              Longueur
-            </label>
-            <input
-              type="number"
-              className="input input-primary validator"
-              required
-              placeholder="Longueur en mm"
-              // min="1"
-              // max="10"
-              onChange={handleChange}
-              title="longueur"
-              name="longueur"
-              value={formData.longueur || ''}
-            />
-            <label className="block text-lg font-medium text-gray-700">
-              Quantité
-            </label>
-            <input
-              type="number"
-              className="input input-primary validator"
-              required
-              placeholder="Quantité"
-              min="1"
-              onChange={handleChange}
-              value={formData.quantite}
-              name="quantite"
-              // max="10"
-              title="quantite"
-            />
+            <div className="w-full flex flex-col sm:flex-row gap-4">
+              <div className="w-full flex flex-col">
+                <label className="block text-lg font-medium text-gray-700">
+                  Longueur
+                </label>
+                <input
+                  type="number"
+                  className="input input-primary validator"
+                  required
+                  placeholder="Longueur en mm"
+                  name="longueur"
+                  value={formData.longueur || ''}
+                  onChange={handleChange}
+                  title="longueur"
+                />
+              </div>
+              <div className="w-full flex flex-col">
+                <label className="block text-lg font-medium text-gray-700">
+                  Quantité
+                </label>
+                <input
+                  type="number"
+                  className="input input-primary validator"
+                  required
+                  placeholder="Quantité"
+                  min="1"
+                  name="quantite"
+                  value={formData.quantite}
+                  onChange={handleChange}
+                  title="quantite"
+                />
+              </div>
+            </div>
             <label className="block text-lg font-medium text-gray-700">
               Pour vous re contacter
             </label>
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Nom"
-              value={formData.lastName}
-              onChange={handleChange}
-              className="w-full p-2 border input input-primary"
-              required
-            />
-            <input
-              type="text"
-              name="firstName"
-              placeholder="Prénom"
-              value={formData.firstName}
-              onChange={handleChange}
-              className="w-full p-2 border input input-primary"
-              required
-            />
+            <div className="flex flex-col sm:flex-row gap-4">
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Nom"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full p-2 border input input-primary"
+                  required
+                />
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="Prénom"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="w-full p-2 border input input-primary"
+                  required
+                />
+            </div>
             <input
               type="text"
               name="company"
