@@ -30,7 +30,7 @@ export default function SnackBar({
   return (
     <div
       role="alert"
-      className="alert alert-info fixed bottom-4 left-4 z-50"
+      className="alert alert-info fixed top-4 left-4 z-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
