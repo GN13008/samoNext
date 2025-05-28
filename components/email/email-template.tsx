@@ -47,6 +47,17 @@ interface ContactEmailTemplateProps {
   email: string;
   message: string;
 }
+export interface ContactDevisTemplateProps {
+  section: string;
+  quantite: number;
+  longueur: null | number;
+  nuance: string;
+  firstName: string;
+  lastName: string;
+  company: string;
+  email: string;
+  message: string;
+}
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -116,7 +127,7 @@ export const ContactEmailTemplate = ({
               <li className="" key={3}>
                 <strong>Entreprise :</strong> {company}
               </li>
-              <li className="" key={3}>
+              <li className="" key={4}>
                 <strong>Mail :</strong> {email}
               </li>
             </ul>
@@ -163,5 +174,135 @@ export const ContactEmailTemplate = ({
     </Html>
   );
 };
+export const ContactDevisTemplate = ({
+  section,
+  quantite,
+  longueur,
+  nuance,
+  firstName,
+  lastName,
+  company,
+  email,
+  message,
+}: ContactDevisTemplateProps) => {
+  return (
+    <Html>
+      <Head />
+      <Tailwind
+        config={{
+          theme: {
+            extend: {
+              colors: {
+                brand: "#2250f4",
+                offwhite: "#fafbfb",
+              },
+              spacing: {
+                0: "0px",
+                20: "20px",
+                45: "45px",
+              },
+            },
+          },
+        }}
+      >
+        <Preview>Contact Samo</Preview>
+        <Body className="bg-offwhite text-base font-sans">
+          <Img
+            src="https://www.samo-aciers.fr/logoSamo.png"
+            height="75"
+            alt="samo"
+            className="mx-auto py-20"
+          />
+          <Container className="bg-white p-45">
+            {/* <Heading className="text-center my-0 leading-8">
+              Samo aciers.fr
+            </Heading> */}
 
-export default ContactEmailTemplate;
+            {/* <Section>
+              <Row>
+                <Text className="text-base">
+                  Vous avez une nouvelle demande de samo-aciers.fr
+                </Text>
+
+                <Text className="text-base">La demande :</Text>
+              </Row>
+            </Section> */}
+
+            <Text className="text-base">
+              Vous avez une nouvelle demande provenant du site samo-aciers.fr
+            </Text>
+
+            <ul className="mb-20">
+              <li className="" key={1}>
+                <strong>Nom :</strong> {lastName}
+              </li>
+              <li className="" key={2}>
+                <strong>Prénom :</strong> {firstName}
+              </li>
+              <li className="" key={3}>
+                <strong>Entreprise :</strong> {company}
+              </li>
+              <li className="" key={4}>
+                <strong>Mail :</strong> {email}
+              </li>
+            </ul>
+
+            <Text className="text-base">La demande :</Text>
+
+            <ul className="mb-20">
+              <li className="" key={1}>
+                <strong>Nuance :</strong> {nuance}
+              </li>
+              <li className="" key={2}>
+                <strong>Section :</strong> {section}
+              </li>
+              <li className="" key={3}>
+                <strong>Longueur :</strong> {longueur}
+              </li>
+              <li className="" key={4}>
+                <strong>Quantité :</strong> {quantite}
+              </li>
+            </ul>
+            <Text className="text-base">Message spécifique :</Text>
+            <Text className="text-base">{message}</Text>
+            {/* <Section className="text-center">
+              <Button className="bg-brand text-white rounded-lg py-3 px-[18px]">
+                Go to your dashboard
+              </Button>
+            </Section> */}
+
+            <Section className="mt-45">
+              <Row>
+                <Column key="samo">
+                  <Link
+                    className="text-black underline font-bold"
+                    href={"https://samo-aciers.fr"}
+                  >
+                    Samo aciers.fr
+                  </Link>{" "}
+                  <span className="text-green-500">→</span>
+                </Column>
+              </Row>
+            </Section>
+          </Container>
+
+          {/* <Container className="mt-20">
+            <Section>
+              <Row>
+                <Column className="text-right px-20">
+                  <Link>Unsubscribe</Link>
+                </Column>
+                <Column className="text-left">
+                  <Link>Manage Preferences</Link>
+                </Column>
+              </Row>
+            </Section>
+            <Text className="text-center text-gray-400 mb-45">
+              Netlify, 44 Montgomery Street, Suite 300 San Francisco, CA
+            </Text>
+          </Container> */}
+        </Body>
+      </Tailwind>
+    </Html>
+  );
+};

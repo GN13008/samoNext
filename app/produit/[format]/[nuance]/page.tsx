@@ -65,6 +65,7 @@ function Table() {
 }
 
 import type { Metadata, ResolvingMetadata } from "next";
+import DevisForm from "@/components/product/devis-form.component";
 type Props = {
   params: { format: string; nuance: string };
 };
@@ -94,12 +95,8 @@ export default function ExempleProduct({
     nuance: string;
   };
 }) {
-  // const pathname = usePathname();
-  // const args = pathname.split("/");
   const formatPath = params.format;
   const nuancePath = params.nuance;
-  // const formatPath = args[2];
-  // const nuancePath = args[3];
   const format = fakeData[formatPath];
   const data = format.nuances[nuancePath];
   if (
@@ -142,90 +139,10 @@ export default function ExempleProduct({
           />
         </div>
         {/* Formulaire de sélection */}
-        <div>
-          {/* <form action="/ajouter_devis" method="POST" className="space-y-4"> */}
-          {/* Sélection du diamètre intérieur */}
-          <div className="flex flex-col gap-4 mb-4">
-            <label className="block text-xl font-semibold text-gray-700">
-              {data.dims.length ? "Dimensions disponibles :" : ""}
-            </label>
-            {data.dims.map((dim, i) => (
-              <div key={i}>
-                {dim.type == "list" && (
-                  <div className="">
-                    <label className="block text-lg font-medium text-gray-700">
-                      {dim.label}
-                    </label>
-                    {/* <label for="diametre_interieur" className="block text-lg font-medium text-gray-700">Diamètre intérieur (mm)</label> */}
-                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-2 pr-2 max-h-64 sm:max-h-96 overflow-auto">
-                      {dim.values.map((diam: any) => (
-                        <button
-                          key={diam}
-                          type="button"
-                          className="border rounded-md py-2 px-4 bg-gray-100 hover:bg-gray-200 focus:bg-indigo-600 focus:text-white"
-                        >
-                          {diam}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {dim.type == "range" && (
-                  <div className="">
-                    <label className="block text-lg font-medium text-gray-700">
-                      {dim.label}
-                    </label>
-                    <p>
-                      De {dim.values[0]} à {dim.values[1]}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          {/* Sélection du diamètre extérieur */}
-
-          {/* Option certificat */}
-          {/* <div className="flex items-center">
-              <input
-                id="ccpu"
-                name="ccpu"
-                type="checkbox"
-                className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
-              />
-              <label for="ccpu" className="ml-2 text-gray-700">Obtenir le CCPU (+7,00€)</label>
-              <label className="ml-2 text-gray-700">
-                Obtenir le CCPU (+7,00€)
-              </label>
-            </div> */}
-          {/* Quantité */}
-          {/* <div>
-              <label for="quantite" className="block text-lg font-medium text-gray-700">Quantité</label>
-              <label className="block text-lg font-medium text-gray-700">
-                Quantité
-              </label>
-              <input
-                type="number"
-                id="quantite"
-                name="quantite"
-                value="1"
-                className="mt-2 block w-full border-gray-300 rounded-md shadow-sm"
-              />
-            </div> */}
-          {/* Bouton ajouter au devis */}
-          <div className="flex justify-between gap-4 flex-col lg:flex-row">
-            <a
-              href="mailto:commercial@samo-aciers.fr"
-              className="btn btn-wide btn-primary"
-            >
-              Demander un devis par mail
-            </a>
-            <a href="tel:0477930033" className="btn btn-wide btn-secondary">
-              Demander un devis par téléphone
-            </a>
-          </div>
-          {/* </form> */}
-        </div>
+        <DevisForm
+          data={data}
+          nuance={`${capitalizeFirstLetter(formatPath)}  ${nuancePath}`}
+        />
       </div>
       {/* Informations complémentaires */}
       {/* <div className="mt-8">

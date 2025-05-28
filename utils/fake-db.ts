@@ -1,4 +1,4 @@
-interface NuanceData {
+export interface NuanceData {
   description: string;
   dims: { label: string; values: any; type: "list" | "range" }[];
 }
