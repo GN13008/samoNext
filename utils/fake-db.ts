@@ -10,7 +10,7 @@ interface Format {
 }
 export const fakeData: { [format: string]: Format } = {
   rond: {
-    defaultImage: "/round_bars_gray.svg",
+    defaultImage: "/round_bars.svg",
     description: "Une large gamme de rond: acier, ...",
     nuances: {
       "S235JR-h9": {
@@ -932,7 +932,7 @@ export const fakeData: { [format: string]: Format } = {
     },
   },
   plat: {
-    defaultImage: "/sheets_gray.svg",
+    defaultImage: "/flat_bars.svg",
     description: "Une large gamme de plat: acier, ...",
     nuances: {
       "S235JR-h11": {
@@ -1542,7 +1542,7 @@ export const fakeData: { [format: string]: Format } = {
     },
   },
   carre: {
-    defaultImage: "/square_bars_gray.svg",
+    defaultImage: "/square_bars.svg",
     description: "Une large gamme de carré: acier, ...",
     nuances: {
       "S235JR-h11": {
@@ -1748,7 +1748,7 @@ export const fakeData: { [format: string]: Format } = {
     },
   },
   tube: {
-    defaultImage: "/seamless_round_tubes_gray.svg",
+    defaultImage: "/seamless_round_tubes.svg",
     description: "Une large gamme de hexagone: acier, ...",
     nuances: {},
   },
