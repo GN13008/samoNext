@@ -10,7 +10,10 @@ export default function ExempleProduct({
 }) {
   const router = useRouter();
   const pathname = usePathname();
-  const nuances = Object.keys(fakeData[params.format].nuances);
+  // Trie les nuances par ordre alphabétique (insensible à la casse)
+  const nuances = Object.keys(fakeData[params.format].nuances).sort((a, b) =>
+    a.localeCompare(b, "fr", { sensitivity: "base" })
+  );
   return (
     <div className="max-w-screen-xl mx-auto p-6">
       <div className="breadcrumbs text-xs sm:text-sm">
