@@ -33,6 +33,7 @@ export default function ProductsSection() {
               (1.4404), 431 (1.4057), APX4 (1.4418), 17-4PH (1.4542), ...
             </li>
             <li>produits non ferreux : Bronze, Laiton, Aluminium, Titane, …</li>
+            <li>tubes aciers mécaniques : E355, E470, P265, … </li>
             <li>
               plastique : PA6, PEHD, POM, PMMA, PC, CELORON, PTFE, PEEK, …
             </li>
