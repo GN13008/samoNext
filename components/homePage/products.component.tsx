@@ -17,12 +17,8 @@ export default function ProductsSection() {
           </p>
           <ul className="hidden lg:block ps-5 mt-2 space-y-1 list-disc list-inside">
             <li>
-              produits traditionnels en acier standard : tube carré, tube
-              rectangulaire, cornière, poutrelle, tôle, …
-            </li>
-            <li>
-              aciers alliés de mécaniques : C45, C35, S235, S355, 16NC6, 42CD4R,
-              42CD4T, ETG100, …
+              aciers alliés de mécaniques étirés ou laminés : C45, C35, S235,
+              S355, 16NC6, 42CD4R, 42CD4T, ETG100, …
             </li>
             <li>
               aciers fortement alliés à outils : 40CDM8T, 30CND8T, 55NCDV7T,
@@ -32,10 +28,14 @@ export default function ProductsSection() {
               aciers inoxydables : Z30C13T (1.4028), 304L (1.4307), 316L
               (1.4404), 431 (1.4057), APX4 (1.4418), 17-4PH (1.4542), ...
             </li>
-            <li>produits non ferreux : Bronze, Laiton, Aluminium, Titane, …</li>
             <li>tubes aciers mécaniques : E355, E470, P265, … </li>
             <li>
               plastique : PA6, PEHD, POM, PMMA, PC, CELORON, PTFE, PEEK, …
+            </li>
+            <li>produits non ferreux : Bronze, Laiton, Aluminium, Titane, …</li>
+            <li>
+              produits traditionnels en acier standard : tube carré, tube
+              rectangulaire, cornière, poutrelle, tôle, …
             </li>
           </ul>
         </div>
