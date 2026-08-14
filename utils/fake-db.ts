@@ -1749,7 +1749,7 @@ export const fakeData: { [format: string]: Format } = {
   },
   tube: {
     defaultImage: "/seamless_round_tubes_gray.svg",
-    description: "Une large gamme de hexagone: acier, ...",
+    description: "Une large gamme de tube: acier, ...",
     nuances: {},
   },
   hexagone: {
