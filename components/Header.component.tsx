@@ -57,7 +57,7 @@ const categories = [
       href: "/produit/hexagone",
       label: "Hexagone",
       icons: "/hexagon_bars.svg",
-      smallTxt: "Large gamme de profilé acier, ...",
+      smallTxt: "Large gamme de hexagone acier, ...",
     },
   ],
 ];
@@ -309,10 +309,10 @@ const Header = () => {
           className={`${bigMenuIsOpen ? " " : "hidden "} w-full left-0 top-20 absolute bg-white border-gray-200 shadow-sm border-y`}
         >
           <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
-            {categories.map((categorie) => (
-              <ul aria-labelledby="mega-menu-full-dropdown-button">
+            {categories.map((categorie, i) => (
+              <ul key={i} aria-labelledby="mega-menu-full-dropdown-button">
                 {categorie.map((produit) => (
-                  <li>
+                  <li key={produit.href}>
                     <a
                       href={produit.href}
                       className="flex gap-2 items-center p-3 rounded-lg hover:bg-gray-50 "
@@ -320,7 +320,7 @@ const Header = () => {
                       <div className="flex items-center justify-center w-20 h-20">
                         <img
                           src={produit.icons}
-                          alt={produit.href}
+                          alt={`Acier ${produit.label}`}
                           className="w-16 h-16"
                         />
                       </div>
@@ -422,10 +422,10 @@ const Header = () => {
                   </div>
                   <div className="collapse-content">
                     <div className="grid max-w-screen-xl mx-auto text-gray-900">
-                      {categories.map((categorie) => (
-                        <ul>
+                      {categories.map((categorie, i) => (
+                        <ul key={i}>
                           {categorie.map((produit) => (
-                            <li>
+                            <li key={produit.href}>
                               <a
                                 href={produit.href}
                                 className="flex gap-2 items-center p-3 rounded-lg hover:bg-gray-50 "
@@ -433,7 +433,7 @@ const Header = () => {
                                 <div className="flex items-center justify-center w-16 h-16">
                                   <img
                                     src={produit.icons}
-                                    alt={produit.href}
+                                    alt={`Acier ${produit.label}`}
                                     className="w-12 h-12"
                                   />
                                 </div>

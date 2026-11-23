@@ -38,7 +38,7 @@ export default function ExempleProduct({
         <div>
           <img
             src={fakeData[params.format].defaultImage}
-            alt="Tube acier rodé"
+            alt={fakeData[params.format].description}
             className="w-2/3 h-auto mx-auto rounded"
           />
         </div>

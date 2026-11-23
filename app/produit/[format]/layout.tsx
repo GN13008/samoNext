@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { fakeData } from "@/utils/fake-db";
 
 export default function RootLayout({
   children,
@@ -7,8 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { format: string };
 }>) {
-  // TODO GET ALL FORMAT FROM DB
-  if (["rond", "carre", "plat", "hexagone"].indexOf(params.format) < 0) {
+  if (!(params.format in fakeData)) {
     notFound();
   }
   return <div className="">{children}</div>;

@@ -101,11 +101,8 @@ export default function ExempleProduct({
   // const formatPath = args[2];
   // const nuancePath = args[3];
   const format = fakeData[formatPath];
-  const data = format.nuances[nuancePath];
-  if (
-    ["rond", "carre", "hexagone", "plat"].indexOf(formatPath) < 0 ||
-    data === undefined
-  ) {
+  const data = format?.nuances[nuancePath];
+  if (!format || data === undefined) {
     notFound();
   }
   return (
