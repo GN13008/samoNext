@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<g transform="translate(7 31.52) scale(0.96)" stroke-linejoin="round" stroke-linecap="round">
+<path d="M0,0L32,0L52,-11L20,-11Z" fill="#F1F5F9" stroke="#14213D" stroke-width="1.8"/>
+<path d="M32,0L32,12L52,1L52,-11Z" fill="#F1F5F9" stroke="#14213D" stroke-width="1.8"/>
+<clipPath id="f"><path d="M0,0L32,0L32,12L0,12Z" clip-rule="nonzero"/></clipPath>
+<path d="M0,0L32,0L32,12L0,12Z" fill="#fff" fill-rule="nonzero"/>
+<path d="M0,0L32,0L32,12L0,12Z" stroke="#14213D" stroke-width="1.8"/>
+</g>
+</svg>

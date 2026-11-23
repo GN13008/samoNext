@@ -28,13 +28,13 @@ const categories = [
     {
       href: "/produit/rond",
       label: "Rond",
-      icons: "/round_bars.svg",
+      icons: "/icons/rond.svg",
       smallTxt: "Large gamme de rond acier, ...",
     },
     {
       href: "/produit/plat",
       label: "Plat",
-      icons: "/flat_bars.svg",
+      icons: "/icons/plat.svg",
       smallTxt: "Large gamme de plat acier, ...",
     },
   ],
@@ -42,13 +42,13 @@ const categories = [
     {
       href: "/produit/carre",
       label: "Carré",
-      icons: "/square_bars.svg",
+      icons: "/icons/carre.svg",
       smallTxt: "Large gamme de carré acier, ...",
     },
     {
       href: "/produit/tube",
       label: "Tube",
-      icons: "/seamless_round_tubes.svg",
+      icons: "/icons/tube.svg",
       smallTxt: "Large gamme de tube acier, ...",
     },
   ],
@@ -56,7 +56,7 @@ const categories = [
     {
       href: "/produit/hexagone",
       label: "Hexagone",
-      icons: "/hexagon_bars.svg",
+      icons: "/icons/hexagone.svg",
       smallTxt: "Large gamme de hexagone acier, ...",
     },
   ],
@@ -315,16 +315,18 @@ const Header = () => {
                   <li key={produit.href}>
                     <a
                       href={produit.href}
-                      className="flex gap-2 items-center p-3 rounded-lg hover:bg-gray-50 "
+                      className="group flex gap-4 items-center p-3 rounded-xl hover:bg-slate-50 transition-colors"
                     >
-                      <div className="flex items-center justify-center w-20 h-20">
+                      <div className="flex items-center justify-center w-20 h-20 rounded-md bg-white ring-1 ring-slate-200 group-hover:ring-slate-400 group-hover:bg-white transition">
                         <img
                           src={produit.icons}
                           alt={`Acier ${produit.label}`}
-                          className="w-16 h-16"
+                          className="w-14 h-14"
                         />
                       </div>
-                      <div className="font-semibold">{produit.label}</div>
+                      <div className="font-semibold text-slate-800 group-hover:text-slate-950 transition-colors">
+                        {produit.label}
+                      </div>
                       {/* <span className="text-sm text-gray-500 ">
                         {produit.smallTxt}
                       </span> */}
@@ -428,13 +430,13 @@ const Header = () => {
                             <li key={produit.href}>
                               <a
                                 href={produit.href}
-                                className="flex gap-2 items-center p-3 rounded-lg hover:bg-gray-50 "
+                                className="flex gap-4 items-center p-2 rounded-xl hover:bg-slate-50 transition-colors"
                               >
-                                <div className="flex items-center justify-center w-16 h-16">
+                                <div className="flex items-center justify-center w-16 h-16 rounded-md bg-white ring-1 ring-slate-200">
                                   <img
                                     src={produit.icons}
                                     alt={`Acier ${produit.label}`}
-                                    className="w-12 h-12"
+                                    className="w-11 h-11"
                                   />
                                 </div>
                                 <div className="font-semibold">
