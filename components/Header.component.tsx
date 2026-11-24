@@ -4,9 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import ButtonSignin from "./ButtonSignin";
-import logo from "@/app/icon.png";
-import config from "@/config";
+
+const APP_NAME = "SAMO Aciers";
 
 const links = [
   {
@@ -45,12 +44,13 @@ const categories = [
       icons: "/icons/carre.svg",
       smallTxt: "Large gamme de carré acier, ...",
     },
-    {
-      href: "/produit/tube",
-      label: "Tube",
-      icons: "/icons/tube.svg",
-      smallTxt: "Large gamme de tube acier, ...",
-    },
+    // Tube : pas encore disponible en prod
+    // {
+    //   href: "/produit/tube",
+    //   label: "Tube",
+    //   icons: "/icons/tube.svg",
+    //   smallTxt: "Large gamme de tube acier, ...",
+    // },
   ],
   [
     {
@@ -139,7 +139,6 @@ const Header = () => {
   useEffect(() => {
     // Détecte le clic en dehors du composant
     const handleClickOutside = (event: any) => {
-      console.log(event.target);
       if (
         componentRef.current &&
         !componentRef.current.contains(event.target)
@@ -169,7 +168,7 @@ const Header = () => {
           <Link
             className="flex items-center gap-2 shrink-0 "
             href="/"
-            title={`${config.appName} hompage`}
+            title={`${APP_NAME} - accueil`}
           >
             <Image
               src="/logoSamo_transparent.png"
@@ -306,7 +305,7 @@ const Header = () => {
         </div>
         {/* <div className="hidden lg:flex lg:justify-end lg:flex-1">{cta}</div> */}
         <div
-          className={`${bigMenuIsOpen ? " " : "hidden "} w-full left-0 top-20 absolute bg-white border-gray-200 shadow-sm border-y`}
+          className={`${bigMenuIsOpen ? " " : "hidden "} w-full left-0 top-20 absolute z-40 bg-white border-gray-200 shadow-sm border-y`}
         >
           <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             {categories.map((categorie, i) => (
@@ -348,7 +347,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <Link
               className="flex items-center gap-2 shrink-0 "
-              title={`${config.appName} hompage`}
+              title={`${APP_NAME} - accueil`}
               href="/"
             >
               <Image
@@ -513,9 +512,9 @@ const Header = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -551,9 +550,9 @@ const Header = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
                   </svg>

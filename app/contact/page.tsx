@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/contact-form.component";
 import FAQ from "@/components/FAQ.component";
+
+export const metadata: Metadata = {
+  title: "Contact et demande de devis",
+  description:
+    "Contactez SAMO Aciers pour un devis ou un renseignement sur nos aciers : formulaire, téléphone au 04 77 93 00 33 ou e-mail. Nous sommes situés à Villars, près de Saint-Étienne (Loire).",
+  alternates: { canonical: "/contact" },
+};
 
 function ContactEl({
   svg,
@@ -28,7 +36,9 @@ export default function ContactPage() {
     <div className="flex min-h-screen flex-col items-center">
       <div className="hero bg-slate-50" id="histoire">
         <div className="hero-content flex flex-col lg:my-24">
-          <h2 className="w-full lg:mb-4 text-left">Nous contacter</h2>
+          <h1 className="w-full lg:mb-4 text-left text-3xl md:text-5xl tracking-tight font-extrabold">
+            Nous contacter
+          </h1>
           <div className="hero-content p-0 py-4 flex-col-reverse lg:flex-row">
             <ContactForm />
             <div className="flex flex-col gap-8 lg:ml-32">

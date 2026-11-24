@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import FAQ from "@/components/FAQ.component";
 import CoupeSection from "@/components/homePage/coupe.component";
 import EquipementsSection from "@/components/homePage/equipements.component";
@@ -5,21 +7,28 @@ import NumbersSection from "@/components/homePage/numbers.component";
 import ProductsSection from "@/components/homePage/products.component";
 import ValuesSection from "@/components/homePage/values.component";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: "url(/home3.jpg)",
-        }}
-      >
+      <div className="hero min-h-screen relative isolate">
+        <Image
+          src="/home3.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover -z-10"
+        />
         <div className="hero-overlay bg-opacity-45"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-xl">
-            <p className="mb-5 text-7xl font-mono font-bold text-white">
+            <h1 className="mb-5 text-7xl font-mono font-bold !text-white">
               SAMO Aciers
-            </p>
+            </h1>
             <p className="mb-5 text-3xl text-white">
               Votre fournisseur de produits métallurgiques ferreux et
               non-ferreux.
@@ -38,9 +47,13 @@ export default function Home() {
           <h2 className="md:hidden">
             Une histoire familiale de confiance et de longévité
           </h2>
-          <img
+          <Image
             src="/3d_samo.jpg"
-            className="lg:max-w-md rounded-lg shadow-2xl lg:mr-8 brightness-90"
+            alt="Vue 3D du bâtiment agrandi de SAMO Aciers"
+            width={3840}
+            height={2160}
+            sizes="(min-width: 1024px) 448px, 100vw"
+            className="lg:max-w-md w-full h-auto rounded-lg shadow-2xl lg:mr-8 brightness-90"
           />
           <div>
             <h2 className="mb-4 hidden md:inline">
@@ -63,7 +76,7 @@ export default function Home() {
           <ProductsSection />
         </div>
       </div>
-      <div className="hero bg-white" id="produits">
+      <div className="hero bg-white" id="coupe">
         <div className="hero-content flex flex-col my-2 lg:my-12">
           <CoupeSection />
         </div>
@@ -90,9 +103,13 @@ export default function Home() {
         <div className="hero-content flex flex-col">
           <h2 className="w-full lg:mb-4 text-left">Une histoire de famille</h2>
           <div className="hero-content p-0 lg:p-4 flex-col lg:flex-row">
-            <img
+            <Image
               src="/history1.jpg"
-              className="mb-2 w-1/2 lg:w-full lg:max-w-md rounded-lg shadow-2xl lg:mr-12 brightness-90"
+              alt="Ancienne plaquette de présentation de SAMO Aciers : bureaux, stock d'aciers et scie à ruban"
+              width={1131}
+              height={1600}
+              sizes="(min-width: 1024px) 448px, 50vw"
+              className="mb-2 w-1/2 lg:w-full h-auto lg:max-w-md rounded-lg shadow-2xl lg:mr-12 brightness-90"
             />
             <div>
               <ol className="relative border-s border-gray-700">

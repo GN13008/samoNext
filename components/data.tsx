@@ -27,6 +27,14 @@ export const products = [
     cta: "Découvrir",
     link: "/produit/hexagone",
   },
+  // Tube : pas encore disponible en prod
+  // {
+  //   title: "Tube",
+  //   img: "/acier_tube.png",
+  //   content: "Un texte sur le produit",
+  //   cta: "Découvrir",
+  //   link: "/produit/tube",
+  // },
   // {
   //   title: "Produits traditionnel",
   //   img: "/acier_tous.png",

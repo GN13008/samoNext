@@ -3,15 +3,19 @@ interface NuanceData {
   dims: { label: string; values: any; type: "list" | "range" }[];
 }
 
-interface Format {
+export interface Format {
+  /** Nom affiché (avec accents), ex. "Carré" */
+  label: string;
   defaultImage: string;
   description: string;
   nuances: { [nuance: string]: NuanceData };
 }
 export const fakeData: { [format: string]: Format } = {
   rond: {
+    label: "Rond",
     defaultImage: "/icons/rond.svg",
-    description: "Une large gamme de rond: acier, ...",
+    description:
+      "Barres rondes en acier pour l'usinage, la mécanique générale et la construction : aciers de décolletage, de construction, alliés, à outils ou inoxydables, en état laminé, étiré ou rectifié. Choisissez une nuance pour consulter les diamètres disponibles.",
     nuances: {
       "S235JR-h9": {
         description: "S235JR h9 ETIRE",
@@ -932,8 +936,10 @@ export const fakeData: { [format: string]: Format } = {
     },
   },
   plat: {
+    label: "Plat",
     defaultImage: "/icons/plat.svg",
-    description: "Une large gamme de plat: acier, ...",
+    description:
+      "Barres plates en acier, laminées ou étirées, pour la serrurerie, la mécano-soudure, la construction métallique et l'outillage. Choisissez une nuance pour consulter les sections disponibles.",
     nuances: {
       "S235JR-h11": {
         description: "S235JR h11 ETIRE",
@@ -1542,8 +1548,10 @@ export const fakeData: { [format: string]: Format } = {
     },
   },
   carre: {
+    label: "Carré",
     defaultImage: "/icons/carre.svg",
-    description: "Une large gamme de carré: acier, ...",
+    description:
+      "Barres carrées en acier, laminées ou étirées, pour l'usinage, la serrurerie, la forge et la fabrication d'outillage. Choisissez une nuance pour consulter les sections disponibles.",
     nuances: {
       "S235JR-h11": {
         description: "S235JR h11 ETIRE",
@@ -1747,14 +1755,20 @@ export const fakeData: { [format: string]: Format } = {
       },
     },
   },
-  tube: {
-    defaultImage: "/icons/tube.svg",
-    description: "Une large gamme de tube: acier, ...",
-    nuances: {},
-  },
+  // Tube : pas encore disponible en prod, à réactiver (et dé-commenter dans
+  // Header.component.tsx et data.tsx) quand la gamme sera prête.
+  // tube: {
+  //   label: "Tube",
+  //   defaultImage: "/icons/tube.svg",
+  //   description:
+  //     "Tubes en acier mécanique (E355, E470, P265, ...) et tubes de construction : ronds, carrés et rectangulaires, pour l'usinage, la mécano-soudure et la construction. La gamme détaillée arrive bientôt en ligne : contactez-nous pour connaître les dimensions disponibles.",
+  //   nuances: {},
+  // },
   hexagone: {
+    label: "Hexagone",
     defaultImage: "/icons/hexagone.svg",
-    description: "Une large gamme de hexagone: acier, ...",
+    description:
+      "Barres hexagonales en acier, étirées, pour le décolletage et la fabrication de pièces mécaniques (écrous, raccords, entretoises). Choisissez une nuance pour consulter les sections disponibles.",
     nuances: {
       "E335GC-h11": {
         description: "E335GC h11 ETIRE",

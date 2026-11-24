@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { products } from "../data";
 
 export default function ProductsSection() {
@@ -7,41 +9,40 @@ export default function ProductsSection() {
         <div className="">
           <h2 className="w-full mb-4 text-left">Un service sur mesure</h2>
           <p className="w-full text-left text-base mb-4">
-            Nous vendons tous types de produits métallurgiques laminé ou
-            étiré, en rond, plat, carré, tube, et profilé.
+            Nous vendons tous types de produits métallurgiques laminés ou
+            étirés, en rond, plat, carré, hexagone, tube, et profilé.
           </p>
           <p className="w-full text-left text-base mb-4 lg:hidden">
             Produits traditionnels en aciers standard, aciers alliés de
             mécanique, aciers fortement alliés à outils, aciers inoxydables,
-            produits non ferreur, plastique, ...
+            produits non ferreux, plastique, ...
           </p>
           <ul className="hidden lg:block ps-5 mt-2 space-y-1 list-disc list-inside">
             <li>
-              aciers alliés de mécaniques étirés ou laminés : C45, C35, S235,
+              aciers alliés de mécaniques étirés ou laminés : C45, C35, S235,
               S355, 16NC6, 42CD4R, 42CD4T, ETG100, …
             </li>
             <li>
-              aciers fortement alliés à outils : 40CDM8T, 30CND8T, 55NCDV7T,
+              aciers fortement alliés à outils : 40CDM8T, 30CND8T, 55NCDV7T,
               Z160CDV12, 35NCD16, Z38CDV5, 90MCV8, 100C6, …
             </li>
             <li>
-              aciers inoxydables : Z30C13T (1.4028), 304L (1.4307), 316L
+              aciers inoxydables : Z30C13T (1.4028), 304L (1.4307), 316L
               (1.4404), 431 (1.4057), APX4 (1.4418), 17-4PH (1.4542), ...
             </li>
             <li>tubes aciers mécaniques : E355, E470, P265, … </li>
             <li>
-              plastique : PA6, PEHD, POM, PMMA, PC, CELORON, PTFE, PEEK, …
+              plastique : PA6, PEHD, POM, PMMA, PC, CELORON, PTFE, PEEK, …
             </li>
-            <li>produits non ferreux : Bronze, Laiton, Aluminium, Titane, …</li>
+            <li>produits non ferreux : Bronze, Laiton, Aluminium, Titane, …</li>
             <li>
-              produits traditionnels en acier standard : tube carré, tube
+              produits traditionnels en acier standard : tube carré, tube
               rectangulaire, cornière, poutrelle, tôle, …
             </li>
           </ul>
         </div>
-        <a
+        <Link
           href="/produit"
-          title=""
           className="flex items-center text-base font-medium text-blue-600 hover:underline"
         >
           Voir tous les aciers
@@ -56,41 +57,40 @@ export default function ProductsSection() {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M19 12H5m14 0-4 4m4-4-4-4"
             />
           </svg>
-        </a>
+        </Link>
       </div>
-      <div className="flex flex-row flex-wrap w-full mx-auto content-center items-center">
-        {products.map((prod, i) => {
+      <div className="flex flex-row flex-wrap justify-center w-full mx-auto content-center items-center">
+        {products.map((prod) => {
           return (
-            <div className="w-1/2 lg:w-1/4 p-4">
-              <a
-                key={i}
+            <div key={prod.link} className="w-1/2 lg:w-1/4 p-4">
+              <Link
                 href={prod.link}
-                className="relative flex flex-col justify-center overflow-hidden rounded-xl shadow-md"
+                className="relative block overflow-hidden rounded-xl shadow-md"
               >
-                <div className="group relative m-0 flex rounded-xl shadow-2xl sm:mx-auto sm:max-w-lg">
-                  <div className="z-10 h-full w-full overflow-hidden rounded-xl border opacity-50 transition duration-300 ease-in-out group-hover:opacity-80">
-                    <img
-                      className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-60 transition duration-300 group-hover:scale-110"
+                <div className="group relative m-0 flex w-full rounded-xl shadow-2xl">
+                  {/* Ratio fixe : la taille de la carte ne dépend pas de la taille de la photo */}
+                  <div className="relative z-10 aspect-[5/4] w-full overflow-hidden rounded-xl border opacity-50 transition duration-300 ease-in-out group-hover:opacity-80">
+                    <Image
+                      className="animate-fade-in scale-100 transform object-cover object-center opacity-60 transition duration-300 group-hover:scale-110"
                       src={prod.img}
-                      alt={prod.title}
+                      alt={`Acier ${prod.title.toLowerCase()}`}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, 50vw"
                     />
                   </div>
                   <div className="absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
-                    <h1 className="text-l lg:text-2xl font-semibold text-white">
+                    <h3 className="text-l lg:text-2xl font-semibold text-gray-800">
                       {prod.title}
-                    </h1>
-                    {/* <h1 className="hidden lg:block text-sm font-light text-gray-200">
-                      {prod.content}
-                    </h1> */}
+                    </h3>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           );
         })}

@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import FAQ from "@/components/FAQ.component";
 import EquipementsSection from "@/components/homePage/equipements.component";
 import ProductsSection from "@/components/homePage/products.component";
 import TimeLineComponent from "@/components/homePage/timeLine.component";
 import ValuesSection from "@/components/homePage/values.component";
 import { ReactElement } from "react";
+
+export const metadata: Metadata = {
+  title: "Mentions légales",
+  description:
+    "Mentions légales du site de SAMO Aciers : éditeur, hébergement et données personnelles.",
+  alternates: { canonical: "/informations-legales" },
+};
 
 function InfoCardComponent({
   svg,

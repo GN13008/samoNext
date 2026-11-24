@@ -6,8 +6,8 @@ export default function Custom404() {
       <div className="flex flex-col h-full items-center py-12 gap-4">
         <h2>Page introuvable</h2>
         <p className="text-center">
-          Oups, cette page est inexistante ! <br /> Le site est en cours de
-          construction, cette page arrive peut être bientot ?
+          Oups, cette page n&apos;existe pas ou a été déplacée. <br /> Vous
+          pouvez retourner à l&apos;accueil ou nous contacter directement.
         </p>
         <div className="flex justify-between gap-4 flex-col lg:flex-row mt-2">
           <a
